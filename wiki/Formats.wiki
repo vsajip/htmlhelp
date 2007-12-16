@@ -1,0 +1,8 @@
+#summary HTML Help Formats
+#labels Featured
+
+ * [CHM Compiled HTML Help]
+ * [DevHelp]
+ * [HTB]
+ * [JavaHelp]
+ * [WinHelp]
