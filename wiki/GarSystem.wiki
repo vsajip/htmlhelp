@@ -1,0 +1,22 @@
+#summary GAR system
+#labels Tool
+
+= About the GAR system =
+
+The books are built using the [http://www.lnx-bbc.com/garchitecture.html GAR system] -- a mechanism for automating the compilation and installation of third-party source code developed for the [http://www.lnx-bbc.com/ LNX-BBC project]. 
+
+Here it is used to automate the download the sources, extract, patch, configure or build if necessary, and finally convert the documentation into the desired formats.
+
+= Download =
+
+You can download the source from its [http://code.google.com/p/htmlhelp/source Subversion repository].
+
+== Requirements ==
+
+To build all the books you will need:
+ * A POSIX environment, such as [http://www.debian.org/ Linux] or [http://www.cygwin.com/ Cygwin].
+ * [http://docbook.sourceforge.net/ DocBook XSL and DSSSL Stylesheets]
+ * [http://xmlsoft.org/XSLT/ xsltproc]
+ * [http://www.doxygen.org/ Doxygen]
+ * [http://msdn.microsoft.com/library/en-us/htmlhelp/html/vsconHH1Start.asp Microsoft HTML Help SDK] to build CHM.
+ * [http://www.winehq.com/ WINE] to run the Microsoft HTML Help compiler above, if not building under Windows.
