@@ -1,4 +1,4 @@
-#summary Texinfo to HLP How-To
+#summary Texinfo to HLP How-to
 #labels HowTo,HLP
 
 These are the steps to make the files above:

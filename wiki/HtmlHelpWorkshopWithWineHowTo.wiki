@@ -1,4 +1,4 @@
-#summary Microsoft HTML Help Workshop with WINE How-To
+#summary Microsoft HTML Help Workshop with WINE How-to
 #labels HowTo,CHM
 
 =Prerequisites=
