@@ -1,0 +1,43 @@
+				     Read-me
+
+= About =
+
+This application provides a web interface for reference documention in HTML.
+
+Book pages, table of contents, index, and metadata is imported in the DevHelp
+book format and then stored in a MySQL database. A fulltext index is created
+for all HTML pages in each book.
+
+== Why a web interface? ==
+
+Using a web interfaces for a book repository has many advantages, such as
+platform independence and remote access.
+
+This is not an original concept. Other projects with similar aim are/were:
+
+  - Linux Developer Network - a website service that offer programming function
+    reference for the Linux/Gnome platform. It uses DevHelp scheme to show
+    documents and the XML to index the documents.
+
+  - arCHMage - an extensible online reader/decompiler of files in CHM format.
+    It can be run as a standalone HTTP server or as an Apache mod_python
+    handler.
+
+Some projects have an interactive web interface for their own documentation:
+
+  - PHP Online Documentation
+
+  - MYSQL Online Documentation
+
+Other projects spawn local HTTP servers to provide user documentation:
+
+  - Python's pydoc
+
+  - Eclipse's context help system
+
+
+= Features =
+
+  - platform independent
+  - fulltext search
+

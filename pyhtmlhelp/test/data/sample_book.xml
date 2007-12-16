@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<book name="sample_book" title="Title" default_link="page1.html">
+	<contents>
+		<contents_entry name="name1" link="page1.html">
+			<contents_entry name="name2" link="page1.html#anchor"/>
+		</contents_entry>
+		<contents_entry name="name3" link="dir/page2.html"/>
+	</contents>
+	<index>
+		<index_entry name="term0" link="page1.html#anchor" />
+		<index_entry name="term1" link="dir/page2.html" />
+		<index_entry name="term1" link="dir/page2.html#anchor" />
+	</index>
+	<pages>
+		<page path="page1.html"/>
+		<page path="dir/page2.html"/>
+	</pages>
+</book>

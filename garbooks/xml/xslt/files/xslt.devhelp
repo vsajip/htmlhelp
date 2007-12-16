@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="XSL Transformations (XSLT)" link="index.html" author="W3C" name="xslt" version="1.0">
+	<chapters>
+		<sub name="Abstract" link="abstract.html"/>
+		<sub name="Status of this Document" link="status.html"/>
+	</chapters>
+	<functions>
+	</functions>
+</book>

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+for CATEGORY
+do
+	find $CATEGORY -mindepth 1 -maxdepth 1 -type d -not -name CVS -not -name .svn | while read PACKAGE
+	do
+		svn ps svn:ignore 'cookies
+download
+work
+tmp
+' $PACKAGE
+
+	done
+done

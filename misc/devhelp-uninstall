@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+DEVHELP=~/.devhelp
+
+for BOOK
+do
+	rm -f $DEVHELP/specs/$BOOK.devhelp
+	rm -rf $DEVHELP/books/$BOOK
+done

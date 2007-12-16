@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -e
+
+DEVHELP=~/.devhelp
+
+for FILE
+do
+	BASENAME=`basename "$FILE"`
+	BOOK=${BASENAME%.*}
+	
+	mkdir -p "$DEVHELP/books"
+	rm -rf "$DEVHELP/books/$BOOK"
+	
+	TMPDIR=`mktemp -dt devhelp.XXXXXX`
+
+	tar -xzf "$FILE" -C "$TMPDIR"
+
+	mv "$TMPDIR/book" "$DEVHELP/books/$BOOK"
+	mv "$TMPDIR/book.devhelp" "$DEVHELP/books/$BOOK/$BOOK.devhelp"
+
+	rm -rf "$TMPDIR"
+done

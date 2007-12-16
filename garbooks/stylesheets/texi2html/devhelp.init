@@ -1,0 +1,247 @@
+# -*-perl-*-
+
+$SHOW_MENU = 0;
+$SPLIT = 'node';
+$DO_CONTENT = 1;
+$SPLIT_INDEX = undef;
+$IDX_SUMMARY = 1;
+
+$TOP_FILE = 'index.html';
+$TOC_FILE = 'contents.html';
+$NODE_FILES = 1;
+
+$SMALL_RULE = '';
+$DEFAULT_RULE = '';
+$MIDDLE_RULE = '';
+$BIG_RULE = '';
+
+$DOCUMENT_DESCRIPTION = '';
+$SEPARATED_FOOTNOTES = 0;
+
+$index_summary_file_entry = \&devhelp_index_summary_file_entry;
+$index_summary_file_begin = \&devhelp_index_summary_file_begin;
+$index_summary_file_end = \&devhelp_index_summary_file_end;
+
+$print_page_foot = \&devhelp_print_page_foot;
+
+my $default_toc_body = $toc_body;
+$toc_body = \&devhelp_toc_body;
+
+$finish_out = \&devhelp_finish_out;
+my $default_init_out = $init_out;
+
+$init_out = \&devhelp_init_out;
+
+# We prepare a environment for conversion of texi to unicode (maybe this 
+# could be in utf8.init ?)
+my %devhelp_texi_map = %texi_map;
+my %devhelp_simple_map_texi = %simple_map_texi;
+my %devhelp_style_map_texi = ();
+
+foreach my $command (keys(%style_map_texi))
+{
+    $devhelp_style_map_texi{$command} = {}; 
+    foreach my $key (keys (%{$style_map_texi{$command}}))
+    {
+#print STDERR "$command, $key, $style_map_texi{$command}->{$key}\n";
+         $devhelp_style_map_texi{$command}->{$key} = 
+              $style_map_texi{$command}->{$key};
+    }
+}
+
+foreach my $key (keys(%unicode_accents))
+{
+    $devhelp_style_map_texi{$key}->{'function'} = \&t2h_utf8_accent;
+}
+
+foreach my $key (%things_map)
+{
+    if (exists($unicode_map{$key}) and ($unicode_map{$key} ne ''))
+    {
+        $devhelp_texi_map{$key} = chr(hex($unicode_map{$key}));
+    }
+}
+
+$devhelp_simple_map_texi{"\n"} = ' ';
+
+sub xml_protect_text($)
+{
+   my $text = shift;
+   $text =~ s/&/&amp;/g;
+   $text =~ s/</&lt;/g;
+   $text =~ s/>/&gt;/g;
+   $text =~ s/\"/&quot;/g;
+   return $text;
+}
+
+sub devhelp_init_out()
+{
+    my $encoding = &$default_init_out();
+    return $encoding;
+}
+
+$print_navigation	      = \&devhelp_print_navigation;
+sub devhelp_print_navigation
+{
+    my $fh = shift;
+    my $buttons = shift;
+    my $vertical = shift;
+   
+    print $fh '<div class="node">';
+    T2H_DEFAULT_print_navigation($fh, $buttons, $vertical);
+    print $fh '</div>';
+}
+sub devhelp_print_page_foot($)
+{
+    my $fh = shift;
+    print $fh <<EOT;
+<p>
+$PRE_BODY_CLOSE
+</p>
+</body>
+</html>
+EOT
+}
+
+$complex_format_map =
+{
+ 'example' =>
+ {
+  'begin' => q{'<div class="example">'},
+  'end' => q{'</div>'},
+ },
+ 'smallexample' =>
+ {
+  'begin' => q{'<div class="smallexample">'},
+  'end' => q{'</div>'},
+ },
+ 'display' =>
+ {
+  'begin' => q{'<div class="display">'},
+  'end' => q{'</div>'},
+ },
+ 'smalldisplay' =>
+ {
+  'begin' => q{'<div class="smalldisplay">'},
+  'end' => q{'</div>'},
+ }
+};
+
+# Convert texi to string with utf8
+sub to_utf8($)
+{
+    my $text = shift;
+    $main::simple_map_texi_ref = \%devhelp_simple_map_texi;
+    $main::style_map_texi_ref = \%devhelp_style_map_texi;
+    $main::texi_map_ref = \%devhelp_texi_map;
+    my $normal_text_kept = $normal_text;
+    $Texi2HTML::Config::normal_text = \&t2h_utf8_normal_text;
+    
+    $text = main::remove_texi($text);
+
+    $normal_text = $normal_text_kept;
+    $main::simple_map_texi_ref = \%simple_map_texi;
+    $style_map_texi_ref = \%style_map_texi;
+    $main::texi_map_ref = \%texi_map;
+    return $text;
+}
+
+
+my @chapter_lines;
+my @function_lines;
+
+sub devhelp_toc_body($)
+{
+    my $elements_ref = shift;
+    &$default_toc_body($elements_ref);
+    my $level = 0;
+    foreach my $element (@$elements_ref)
+    {
+        while ($level != $element->{'toc_level'})
+        {
+            if ($level < $element->{'toc_level'})
+            {
+                 push (@chapter_lines, "<sub name=\"\" link=\"\">\n");
+                 $level++;
+            }
+            elsif ($level > $element->{'toc_level'})
+            {
+                 push (@chapter_lines, "</sub>\n");
+                 $level--;
+            }
+        }
+        my $text = '';
+        if ($NUMBER_SECTIONS)
+        {
+             $text .= $element->{'number'} . " ";
+             
+        }
+        $text .= to_utf8($element->{'texi'});
+        $text =~ s/^\s*//;
+	$text = xml_protect_text($text);
+        push (@chapter_lines, "<sub name=\"$text\" link=\"$element->{'file'}#$element->{'id'}\">\n");
+	$level++;
+    }
+    while ($level > 0)
+    {
+         push (@chapter_lines, "</sub>\n");
+         $level--;
+    }
+}
+
+# key:          
+# origin_href:  
+# entry:        
+# texi entry: 
+# element_href: 
+# element_text: 
+sub devhelp_index_summary_file_entry ($$$$$$$$)
+{
+    my $name = shift;
+    my $key = shift;
+    my $origin_href = shift;
+    my $entry = shift;
+    my $text = '';
+    #$entry = &$protect_text($key);
+    my $texi_entry = shift;
+    my $element_href = shift;
+    my $element_text = shift;
+    my $is_printed = shift;
+    $entry = xml_protect_text(to_utf8($texi_entry));
+    push (@function_lines, "<function name=\"$entry\" link=\"$origin_href\"/>\n");
+}
+
+sub devhelp_index_summary_file_begin($$)
+{
+    my $name = shift;
+    my $is_printed = shift;
+}
+
+# file is not closed here but in finish_out.
+sub devhelp_index_summary_file_end($$)
+{
+    my $name = shift;
+    my $is_printed = shift;
+}
+
+sub devhelp_finish_out()
+{
+    $TOC_FILE = $Texi2HTML::THISDOC{'file_base_name'}.'.hhc';
+    my $devhelp_file = "$Texi2HTML::THISDOC{'destination_directory'}$Texi2HTML::THISDOC{'file_base_name'}" . ".devhelp";
+    open(DEVHELPFILE, ">:encoding(utf8)", $devhelp_file)
+        || die "Can't open $file_name for writing: $!\n";
+    print "# writing Devhelp spec in $devhelp_file...\n" if $VERBOSE;
+    print DEVHELPFILE "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\n";
+    my $title = xml_protect_text(to_utf8($Texi2HTML::THISDOC{'title_texi'}));
+    print DEVHELPFILE "<book xmlns=\"http://www.devhelp.net/book\" title=\"$title\" link=\"$TOP_FILE\" name=\"$Texi2HTML::THISDOC{'file_base_name'}\">\n";
+    print DEVHELPFILE "<chapters>\n";
+    main::print_lines(\*DEVHELPFILE, \@chapter_lines);
+    print DEVHELPFILE "</chapters>\n";
+    print DEVHELPFILE "<functions>\n";
+    main::print_lines(\*DEVHELPFILE, \@function_lines);
+    print DEVHELPFILE "</functions>\n";
+    print DEVHELPFILE "</book>\n";
+    close (DEVHELPFILE);
+}
+
+1;

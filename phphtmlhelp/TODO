@@ -1,0 +1,48 @@
+			       To-do List
+
+
+Things to be done, by no particular order:
+
+- Be nicer to web caches for bandwith saving since generated TOCs and indexes
+  can be quite big. Some resources are:
+
+  - http://www.mnot.net/cache_docs/
+
+  - http://www.ircache.net/cgi-bin/cacheability.py 
+
+- Better error handling (detection- and recovery-wise).
+
+- Improve usability.
+
+- More commenting.
+
+- Internationalization.
+
+- Tabbed browsing in the XUL interface (via the <tabbrowser> tag). (It might
+  not be possible at all with remote XUL.)
+
+- Add a book "about" page, with metadata and some statistics.
+
+- Add "Previous", "Next" and "Up" buttons to the page navigation.
+
+- Highlight the search terms in pages.
+
+- Add a global search.
+
+- Add user personalization:
+
+  - Bookmarks
+
+  - Comments
+
+- Add better site statistics, per:
+
+  - http://www.zend.com/zend/tut/statistics.php
+
+  - http://www.zend.com/zend/tut/gen-adv-web-stats.php
+
+  - http://www.php-stats.com/
+
+  - http://statcounter.com/
+  
+See also the TODOs and FIXMEs scattered in the source files.

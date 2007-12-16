@@ -1,0 +1,42 @@
+/* tree.css */
+
+body {
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: black;
+	background-color: white;
+	font-size: 10px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #000;
+}
+a:visited {
+	text-decoration: none;
+	color: #999;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+li.open {
+	list-style-image: url(../icons/tree_minus.png);
+	list-style-type: none;
+} 
+li.closed {
+	list-style-image: url(../icons/tree_plus.png);
+	list-style-type: none;
+}
+li.none {
+	list-style-image: url(../icons/tree_none.png);
+	list-style-type: none;
+}
+ul {
+	padding-left: 16;
+}
+ul.open {
+	display: block;
+}
+ul.closed {
+	display: none;
+}

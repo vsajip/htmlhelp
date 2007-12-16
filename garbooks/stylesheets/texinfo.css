@@ -1,0 +1,58 @@
+body { 
+	margin: 2%;
+	padding: 0 5%;
+	background: white;
+	font-family: sans-serif;
+	text-align: justify;
+}
+h1,h2,h3,h4,h5 {
+    padding: 0.5em 0 0 5%;
+    font-weight: bold;
+}
+h1 {
+    padding: 0.5em 0 0.5em 5%;
+    color: white;
+    background: #333;
+}
+pre {
+  margin: 0 5%;
+  padding: 0.5em;
+}
+pre.example {
+  background: #eee;
+  padding-bottom: 1em;
+}
+pre.verbatim {
+  border: solid 1px gray;
+  background: white;
+  padding-bottom: 1em;
+}
+div.node {
+  background: #ccc;
+  margin: 0 -5% 0 -2%;
+  padding: 0.5em 0.5em;
+  border: solid 1px #eee;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #000;
+}
+.node a {
+  color: #770000;
+}
+.node a:visited {
+  color: #550000;
+}
+dd, li {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+samp {
+	font: inherit;
+}
+code {
+	font-size: inherit;
+}
+pre, code { 
+	font-family: monospace;
+}

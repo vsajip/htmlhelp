@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="Extensible Markup Language (XML) 1.0 (Third Edition)" link="index.html" author="W3C" name="xml" version="1.0">
+	<chapters>
+		<sub name="Abstract" link="abstract.html"/>
+		<sub name="Status of this Document" link="status.html"/>
+		<sub name="1 Introduction" link="sec-intro.html">
+			<sub name="1.1 Origin and Goals" link="sec-origin-goals.html"/>
+			<sub name="1.2 Terminology" link="sec-terminology.html"/>
+		</sub>
+		<sub name="2 Documents" link="sec-documents.html">
+			<sub name="2.1 Well-Formed XML Documents" link="sec-well-formed.html"/>
+			<sub name="2.2 Characters" link="charsets.html"/>
+			<sub name="2.3 Common Syntactic Constructs" link="sec-common-syn.html"/>
+			<sub name="2.4 Character Data and Markup" link="syntax.html"/>
+			<sub name="2.5 Comments" link="sec-comments.html"/>
+			<sub name="2.6 Processing Instructions" link="sec-pi.html"/>
+			<sub name="2.7 CDATA Sections" link="sec-cdata-sect.html"/>
+			<sub name="2.8 Prolog and Document Type Declaration" link="sec-prolog-dtd.html"/>
+			<sub name="2.9 Standalone Document Declaration" link="sec-rmd.html"/>
+			<sub name="2.10 White Space Handling" link="sec-white-space.html"/>
+			<sub name="2.11 End-of-Line Handling" link="sec-line-ends.html"/>
+			<sub name="2.12 Language Identification" link="sec-lang-tag.html"/>
+		</sub>
+		<sub name="3 Logical Structures" link="sec-logical-struct.html">
+			<sub name="3.1 Start-Tags, End-Tags, and Empty-Element Tags" link="sec-starttags.html"/>
+			<sub name="3.2 Element Type Declarations" link="elemdecls.html">
+				<sub name="3.2.1 Element Content" link="sec-element-content.html"/>
+				<sub name="3.2.2 Mixed Content" link="sec-mixed-content.html"/>
+			</sub>
+			<sub name="3.3 Attribute-List Declarations" link="attdecls.html">
+				<sub name="3.3.1 Attribute Types" link="sec-attribute-types.html"/>
+				<sub name="3.3.2 Attribute Defaults" link="sec-attr-defaults.html"/>
+				<sub name="3.3.3 Attribute-Value Normalization" link="AVNormalize.html"/>
+			</sub>
+			<sub name="3.4 Conditional Sections" link="sec-condition-sect.html"/>
+		</sub>
+		<sub name="4 Physical Structures" link="sec-physical-struct.html">
+			<sub name="4.1 Character and Entity References" link="sec-references.html"/>
+			<sub name="4.2 Entity Declarations" link="sec-entity-decl.html">
+				<sub name="4.2.1 Internal Entities" link="sec-internal-ent.html"/>
+				<sub name="4.2.2 External Entities" link="sec-external-ent.html"/>
+			</sub>
+			<sub name="4.3 Parsed Entities" link="TextEntities.html">
+				<sub name="4.3.1 The Text Declaration" link="sec-TextDecl.html"/>
+				<sub name="4.3.2 Well-Formed Parsed Entities" link="wf-entities.html"/>
+				<sub name="4.3.3 Character Encoding in Entities" link="charencoding.html"/>
+			</sub>
+			<sub name="4.4 XML Processor Treatment of Entities and References" link="entproc.html">
+				<sub name="4.4.1 Not Recognized" link="not-recognized.html"/>
+				<sub name="4.4.2 Included" link="included.html"/>
+				<sub name="4.4.3 Included If Validating" link="include-if-valid.html"/>
+				<sub name="4.4.4 Forbidden" link="forbidden.html"/>
+				<sub name="4.4.5 Included in Literal" link="inliteral.html"/>
+				<sub name="4.4.6 Notify" link="notify.html"/>
+				<sub name="4.4.7 Bypassed" link="bypass.html"/>
+				<sub name="4.4.8 Included as PE" link="as-PE.html"/>
+				<sub name="4.4.9 Error" link="error.html"/>
+			</sub>
+			<sub name="4.5 Construction of Internal Entity Replacement Text" link="intern-replacement.html"/>
+			<sub name="4.6 Predefined Entities" link="sec-predefined-ent.html"/>
+			<sub name="4.7 Notation Declarations" link="Notations.html"/>
+			<sub name="4.8 Document Entity" link="sec-doc-entity.html"/>
+		</sub>
+		<sub name="5 Conformance" link="sec-conformance.html">
+			<sub name="5.1 Validating and Non-Validating Processors" link="proc-types.html"/>
+			<sub name="5.2 Using XML Processors" link="safe-behavior.html"/>
+		</sub>
+		<sub name="6 Notation" link="sec-notation.html"/>
+		<sub name="A References" link="sec-bibliography.html">
+			<sub name="A.1 Normative References" link="sec-existing-stds.html"/>
+			<sub name="A.2 Other References" link="null.html"/>
+		</sub>
+		<sub name="B Character Classes" link="CharClasses.html"/>
+		<sub name="C XML and SGML" link="sec-xml-and-sgml.html"/>
+		<sub name="D Expansion of Entity and Character References" link="sec-entexpand.html"/>
+		<sub name="E Deterministic Content Models" link="determinism.html"/>
+		<sub name="F Autodetection of Character Encodings" link="sec-guessing.html">
+			<sub name="F.1 Detection Without External Encoding Information" link="sec-guessing-no-ext-info.html"/>
+			<sub name="F.2 Priorities in the Presence of External Encoding Information" link="sec-guessing-with-ext-info.html"/>
+		</sub>
+		<sub name="G W3C XML Working Group" link="sec-xml-wg.html"/>
+		<sub name="H W3C XML Core Working Group" link="sec-core-wg.html"/>
+		<sub name="I Production Notes" link="prod-notes.html"/>
+	</chapters>
+	<functions>
+	</functions>
+</book>

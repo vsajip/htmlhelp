@@ -1,0 +1,35 @@
+			      Installation instructions
+
+= Requirements =
+
+The minimum requirements are:
+
+  - web server
+
+  - PHP 4.3 with the MySQL extenision
+
+  - MySQL 3.23
+  
+
+= Installation =
+
+The installation steps are:
+
+  1. Create an empty MySQL database, and create a database user with usage
+  permissions.
+
+  2. Create and edit a inc/config.inc.php file, based on the
+  inc/config.inc.php.in template.
+
+  3. Configure your web server on the web server.
+
+  4. Access any page with your browser -- it will create the database structure.
+
+  5. Import/upload some DevHelp books from the administration console.
+
+
+= Administration =
+
+The administration console is available from the "admin.php" page (there is no
+direct link at the moment).
+

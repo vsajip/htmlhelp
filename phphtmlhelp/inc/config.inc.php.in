@@ -1,0 +1,32 @@
+<?php
+
+///////////////////////////////////////////////////////////////////////
+// MySQL server settings
+
+$db_server = 'localhost';
+$db_username = 'www';
+$db_password = '';
+$db_database = 'htmlhelp';
+
+
+///////////////////////////////////////////////////////////////////////
+// Administrative settings
+
+// Administrator password
+$admin_password = '';
+
+// Directory with DevHelp books to import. Optional.
+$admin_directory = '';
+
+// Administrator contact email
+$admin_email = '';
+
+
+///////////////////////////////////////////////////////////////////////
+// Miscellaneous settings
+
+// Internal encoding. It can be either UTF-8 or ISO-8859-1. UTF-8 requires
+// PHP 5 with mbstring extension and UTF-8 support in the pcre extension.
+$internal_encoding = 'UTF-8';
+
+?>
