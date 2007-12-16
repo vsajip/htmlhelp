@@ -1,0 +1,9 @@
+#summary Microsoft WinHelp format
+#labels WinHelp,Format
+
+=Links=
+
+ * [http://www.geocities.com/mwinterhoff/helpdeco.htm HelpDeco]
+ * [http://www.geocities.com/mwinterhoff/helpfile.htm Windows Help File Format]
+ * [http://www.herdsoft.com/ftp/downloads.html#winhelpcgi WinHelpCGI] — CGI module for Linux, Solaris, MacOS X and AIX to read Windows Help Files
+ * [http://www.kyz.uklinux.net/libmspack/ libmspack] — a library for Microsoft compression formats
