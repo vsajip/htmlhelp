@@ -3,8 +3,9 @@
 
 These are the steps to make the files above:
 
-* Get '''makertf''' (included in the [http://www.miktex.org/ MiKTeX] distribution) and invoke it as:  
-  
-  makertf --rtf --hpj ''name''.hpj ''name''.texi
+ * Get `makertf` (included in the [http://www.miktex.org/ MiKTeX] distribution) and invoke it as:  
+{{{
+makertf --rtf --hpj name.hpj name.texi
+}}}
 
-* Compile the project using the [ftp://ftp.microsoft.com/Softlib/MSLFILES/HC505.EXE  Microsoft Windows Help Compiler].
+ * Compile the project using the [ftp://ftp.microsoft.com/Softlib/MSLFILES/HC505.EXE  Microsoft Windows Help Compiler].
