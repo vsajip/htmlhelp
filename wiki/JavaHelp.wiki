@@ -1,0 +1,6 @@
+#summary Sun Java Help
+#labels JavaHelp,Format
+
+=Links=
+
+ * [http://java.sun.com/products/javahelp/ JavaHelp's homepage]
