@@ -1,0 +1,6 @@
+#summary How-tos
+#label Featured
+
+ * [HtmlHelpWorkshopWithWineHowTo HTML Help Workshop with WINE How-to]
+ * [TexinfoToChmHowTo to CHM How-to]
+ * [TexinfoToHlpHowTo Texinfo to WinHelp How-to]
