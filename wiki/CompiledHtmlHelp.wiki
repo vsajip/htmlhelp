@@ -1,4 +1,4 @@
-#summary Compiled HTML Help format
+#summary Microsoft Compiled HTML Help format
 #labels CHM,Format
 
 =Authoring=
