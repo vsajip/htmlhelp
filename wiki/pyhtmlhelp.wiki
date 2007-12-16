@@ -3,7 +3,7 @@
 
 = Introduction =
 
-pyhtmlhelp is tool written in Python for converting among CHM, HTB, and DevHelp formats.
+pyhtmlhelp is tool written in Python for converting among [CHM], [HTB], and [DevHelp] formats.
 
 = Requirements =
 
@@ -30,6 +30,6 @@ extensions.
 || [CHM] || Yes || Yes || .chm ||
 || [DevHelp] || Yes || Yes || .tar, .tgz ||
 || [HTB] || Yes || Yes || .htb, .zip ||
-|| [WinHelp] || No || No || - ||
+|| [WinHelp] || No || No || ||
 
 NOTE: Writing CHMs is only supported on Windows.
