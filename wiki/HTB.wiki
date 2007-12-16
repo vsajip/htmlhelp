@@ -1,0 +1,10 @@
+#summary wxWidgets HTML Book (HTB) Format
+#labels HTB,Format
+
+= About =
+
+Basically the [CHM] format but, simply zipped.
+
+= Links =
+
+ * [http://www.wxwidgets.org/ wxWidgets]
