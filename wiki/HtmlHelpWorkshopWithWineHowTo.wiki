@@ -1,0 +1,47 @@
+#summary Microsoft HTML Help Workshop with WINE How-To
+#labels HowTo,CHM
+
+=Prerequisites=
+
+ * WINE:
+   * It's assumed you have an empty WINE environment. Installed software in an existing WINE enviroment may cause conflicts during the installation steps below.
+   * The following instructions were tested with WINE verion 0.9.9. Your mileage with other version will likely vary.
+ * You'll also need to get and install [http://www.kyz.uklinux.net/cabextract.php cabextract].
+
+=Setup=
+
+ # Set WINE's Windows version to Windows 2000 (or above), and add an override to use the native itss.dll, both via winecfg: 
+{{{
+wine winecfg
+}}}
+ # Download [http://msdn.microsoft.com/library/en-us/htmlhelp/html/hwMicrosoftHTMLHelpDownloads.asp Microsoft HTML Help Workshop] and  install it as: 
+{{{
+WINEDLLOVERRIDES="advpack=n" wine htmlhelp.exe
+}}}
+ # Install ITSS.DLL as: 
+{{{
+cabextract -d htmlhelp htmlhelp.exe
+cabextract -d hhupd htmlhelp/hhupd.exe
+cp -a hhupd/itss.dll ~/.wine/drive_c/windows/system32/
+}}}
+ # Download [http://download.microsoft.com/download/sql65/Patch/6.5/WIN98/EN-US/MFC40i.exe Microsoft Foundation Classes update], extract it, and install it as: 
+{{{
+cabextract -d MFC40i MFC40i.exe
+cp -a MFC40i/mfc40.dll ~/.wine/drive_c/windows/system/
+}}}
+
+Alternatively, download [http://htmlhelp.berlios.de/howto/htmlhelp.reg htmlhelp.reg] and the [http://htmlhelp.berlios.de/howto/htmlhelp.sh htmlhelp.sh] script, which will do all the work above for you.
+
+=Usage=
+
+You can now run the command line compiler by doing
+
+{{{
+wine 'C:\Program Files\HTML Help Workshop\hhc.exe' ...
+}}}
+
+You can now run the workshop by doing
+
+{{{
+wine 'C:\Program Files\HTML Help Workshop\hhw.exe' ...
+}}}
