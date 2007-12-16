@@ -1,4 +1,6 @@
+#summary Compiled HTML Help format
 #labels CHM,Format
+
 =Authoring=
 
 The [http://msdn.microsoft.com/library/en-us/htmlhelp/html/vsconHH1Start.asp  Microsoft HTML Help 1.3 SDK] is the official way to create CHM's. The HTML Help Compiler (HHC) takes a HTML Help Project (HHP) file with metadata, a HTML Help Contents (HHC) with the table of contents, and a HTML Help Index (HHK) with the index keywords, and the HTML pages, producing a CHM.
