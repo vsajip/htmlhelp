@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="XHTML 1.0: The Extensible HyperText Markup Language (Second Edition)" link="Cover.html" author="W3C" name="xhtml" version="1.0">
+	<chapters>
+		<sub link="introduction.html#xhtml" name="What is XHTML?">
+			<sub link="introduction.html#html4" name="What is HTML 4?"/>
+			<sub link="introduction.html#xml" name="What is XML?"/>
+			<sub link="introduction.html#why" name="Why the need for XHTML?"/>
+		</sub>
+		<sub link="definitions.html#defs" name="Definitions">
+			<sub link="definitions.html#terms" name="Terminology"/>
+			<sub link="definitions.html#general" name="General Terms"/>
+		</sub>
+		<sub link="normative.html#normative" name="Normative Definition of XHTML 1.0">
+			<sub link="normative.html#docconf" name="Document Conformance">
+				<sub link="normative.html#strict" name="Strictly Conforming Documents"/>
+				<sub link="normative.html#well-formed" name="Using XHTML with other namespaces"/>
+			</sub>
+			<sub link="normative.html#uaconf" name="User Agent Conformance"/>
+		</sub>
+		<sub link="diffs.html#diffs" name="Differences with HTML 4">
+			<sub link="diffs.html#h-4.1" name="Documents must be well-formed"/>
+			<sub link="diffs.html#h-4.2" name="Element and attribute names must be in lower case"/>
+			<sub link="diffs.html#h-4.3" name="For non-empty elements, end tags are required"/>
+			<sub link="diffs.html#h-4.4" name="Attribute values must always be quoted"/>
+			<sub link="diffs.html#h-4.5" name="Attribute Minimization"/>
+			<sub link="diffs.html#h-4.6" name="Empty Elements"/>
+			<sub link="diffs.html#h-4.7" name="White Space handling in attribute values"/>
+			<sub link="diffs.html#h-4.8" name="Script and Style elements"/>
+			<sub link="diffs.html#h-4.9" name="SGML exclusions"/>
+			<sub link="diffs.html#h-4.10" name="The elements with &apos;id&apos; and &apos;name&apos; attributes"/>
+			<sub link="diffs.html#h-4.11" name="Attributes with pre-defined value sets"/>
+			<sub link="diffs.html#h-4.12" name="Entity references as hex values"/>
+		</sub>
+		<sub link="issues.html#issues" name="Compatibility Issues">
+			<sub link="issues.html#media" name="Internet Media Type"/>
+		</sub>
+		<sub link="dtds.html#dtds" name="DTDs">
+			<sub link="dtds.html#h-A1" name="Document Type Definitions">
+				<sub link="dtds.html#a_dtd_XHTML-1.0-Strict" name="XHTML-1.0-Strict"/>
+				<sub link="dtds.html#a_dtd_XHTML-1.0-Transitional" name="XHTML-1.0-Transitional"/>
+				<sub link="dtds.html#a_dtd_XHTML-1.0-Frameset" name="XHTML-1.0-Frameset"/>
+			</sub>
+			<sub link="dtds.html#h-A2" name="Entity Sets">
+				<sub link="dtds.html#a_dtd_Latin-1_characters" name="Latin-1 characters"/>
+				<sub link="dtds.html#a_dtd_Special_characters" name="Special characters"/>
+				<sub link="dtds.html#a_dtd_Symbols" name="Symbols"/>
+			</sub>
+		</sub>
+		<sub link="prohibitions.html#prohibitions" name="Element Prohibitions"/>
+		<sub link="guidelines.html#guidelines" name="HTML Compatibility Guidelines">
+			<sub link="guidelines.html#C_1" name="Processing Instructions and the XML Declaration"/>
+			<sub link="guidelines.html#C_2" name="Empty Elements"/>
+			<sub link="guidelines.html#C_3" name="Element Minimization and Empty Element Content"/>
+			<sub link="guidelines.html#C_4" name="Embedded Style Sheets and Scripts"/>
+			<sub link="guidelines.html#C_5" name="Line Breaks within Attribute Values"/>
+			<sub link="guidelines.html#C_6" name="Isindex"/>
+			<sub link="guidelines.html#C_7" name="The lang and xml:lang Attributes"/>
+			<sub link="guidelines.html#C_8" name="Fragment Identifiers"/>
+			<sub link="guidelines.html#C_9" name="Character Encoding"/>
+			<sub link="guidelines.html#C_10" name="Boolean Attributes"/>
+			<sub link="guidelines.html#C_11" name="Document Object Model and XHTML"/>
+			<sub link="guidelines.html#C_12" name="Using Ampersands in Attribute Values (and Elsewhere)"/>
+			<sub link="guidelines.html#C_13" name="Cascading Style Sheets (CSS) and XHTML"/>
+			<sub link="guidelines.html#C_14" name="Referencing Style Elements when serving as XML"/>
+			<sub link="guidelines.html#C_15" name="White Space Characters in HTML vs. XML"/>
+			<sub link="guidelines.html#C_16" name="The Named Character Reference &amp;apos;"/>
+		</sub>
+		<sub link="acks.html#acks" name="Acknowledgements"/>
+		<sub link="references.html#refs" name="References"/>
+	</chapters>
+	<functions>
+	</functions>
+</book>

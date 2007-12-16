@@ -1,0 +1,36 @@
+There are some problems [with libstc++]:
+- the stream-classes aren't documented at all
+- some pages (e.g. "contents/modules/stl extensions from sgi") look strange and
+  quite right-aligned
+- the class names do not show up directly in the index (e.g. vector is only
+  visible as std::vector)
+
+The last two points are quite minor, but the missing stream documentation is
+bad. Why is it missing?
+
+-- Nicolas Weber																	
+
+
+I've found that the descriptions of string class and basic_string class
+template are missing. So is the file: <string>.
+
+To my surprise, there is a <basic_string.h> file, but there are none of the
+apropriate keywords in help viewer on index tab, like: "basic_string" or
+"string", and more: "basic_ostringstream", "basic_istringstream",
+"basic_stringbuf", and the like.  There are also missing "getline()" member and
+"getline()" function template, which is very useful, since one can make a call
+like this:
+
+  string s;  getline(cin, s);
+
+Looks like doxygen configuration problem to me. Can I ask you to take a look at
+it? You know, the string class is really useful and we want students to learn
+how to use it. Right documentation would be very appreciated.
+
+Check out this pages and compare:
+- http://gcc.gnu.org/onlinedocs/libstdc++/latest-doxygen/files.html 
+- http://gcc.gnu.org/onlinedocs/libstdc++/libstdc++-html-USERS-3.2.1/annotated.html
+
+-- Wiktor Wandachowicz
+
+

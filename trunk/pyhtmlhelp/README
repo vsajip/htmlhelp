@@ -1,0 +1,43 @@
+				   PyHTMLHelp
+				   ==========
+
+
+REQUIREMENTS
+============
+
+- Python 2.3 or greater
+
+- ctypes, from http://cheeseshop.python.org/pypi/ctypes 
+
+- On Windows:
+
+  - comtypes, from http://cheeseshop.python.org/pypi/comtypes
+
+  - Microsoft HTML Help 1.3 SDK, from
+    http://msdn.microsoft.com/library/en-us/htmlhelp/html/vsconHH1Start.asp to
+    create CHMs.
+
+- On Unix:
+
+  - CHMLIB, from http://www.jedrea.com/chmlib/
+  
+NOTE: Writing CHMs is only supported on Windows.
+
+
+
+USAGE
+=====
+
+Simply run:
+
+  hhconvert.py <src-file> <dst-file>
+
+to convert from src-file to dst-file. The formats will be guessed from the file
+extensions:
+
+  .CHM - Microsoft Compiled HTML Help format
+  
+  .HTB, .ZIP - wxWindows' HTML Book format
+
+  .TAR, .TGZ - DevHelp Format
+

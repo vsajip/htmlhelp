@@ -1,0 +1,60 @@
+/* Based on http://www.perldoc.com/css/perldoc.css */
+		
+body {
+	font-family: Arial, Helvetica;
+	background-color: #ffffff;
+}
+
+blockquote {
+	margin: 10pt;
+}
+
+h1 {
+	font-family: Verdana, Arial, Helvetica;
+	font-size: large;
+	font-weight: bold;
+	text-decoration: none;
+	color: #336699;
+}
+
+h2 {
+	font-family: Arial,Helvetica;
+	font-size: medium;
+	font-weight: bold;
+	text-decoration: none;
+	color: #336699;
+}
+
+hr {
+	border: 0px;
+	border-top: 1px solid #336699;
+}
+
+p {
+	font-family: Arial, Helvetica;
+}
+
+pre {
+	border: 1px solid black;
+	padding: 4px;
+	font-size: 10pt;
+	color: black;
+	background-color: #e8e8e8;
+	white-space: pre;
+}
+
+dl {
+	font-family: Arial,Helvetica; font-weight: normal; text-decoration: none;
+	font-size: 10pt;
+	color: #333333;
+}
+
+a {
+	color: #336699;
+}
+
+ul > li > a {
+	font-family: Arial, Helvetica;
+	font-size: 10pt;
+	font-weight: bold;
+}

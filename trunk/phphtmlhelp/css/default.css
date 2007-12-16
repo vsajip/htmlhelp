@@ -1,0 +1,166 @@
+/* General */
+
+body {
+	color: black;
+	background-color: white;
+
+	font-family: sans-serif;
+	font-size: 14px;
+
+	margin: 0;
+	
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+a, a:active, a:visited
+{
+	color: #930F09;
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 16px;
+	color: #666;
+	margin: 20px 0px 5px 0px;
+	border-bottom: 1px dotted #cccccc;
+}
+
+/* Header */
+
+.header {
+	font-size: 36px;
+
+	padding-top: 0.5em;
+	padding-bottom: 0.5ex;
+	
+	border-bottom: 1px solid #000;
+
+	margin-bottom: 1em;
+	
+	overflow: hidden;
+}
+
+/* Sideboxes */
+
+.sidebox {
+	font-size: 12px;
+	
+	margin-top: 1em;
+	margin-left: 2ex;
+	margin-bottom: 1em;
+	
+	width: 30ex ;
+
+	padding: 0px;
+	
+	border: 1px solid #333;
+	
+	float: left;
+	clear: left;
+}
+
+.sidebox .title {
+	color: #fff;
+	background-color: #333;
+	
+	display: block;
+
+	font-size: 14px;
+	font-weight: bold;
+	
+	text-align: center;	
+}
+
+/* Tag list */
+
+#tags table {
+	margin: 1ex;
+
+	width: auto;
+}
+
+table th {
+	color: #999;
+}
+
+table .count {
+	width: 2ex;
+	text-align: right;
+}
+
+table .tag {
+	font-weight: bold;
+	text-align: left;
+}
+
+/* Main content */
+
+.content {
+	background-color: white;
+	
+	text-align: justify;
+	line-height: 1.5em;
+	
+	padding: 1.5ex 1ex;
+	
+	border: 1px dashed #999;
+	
+	margin-left: 40ex;
+	margin-right: 2em;
+}
+
+.content ul {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+	
+	margin: 0px;	
+}
+
+.content ul li {
+	list-style-type: none;
+}
+
+.result pre {
+	width: 100%;
+	height: 20em;
+	overflow: scroll;
+}
+
+/* Logos */
+
+.logos {
+	text-align: right;
+	
+	vertical-align: middle;
+
+	clear: left;
+	
+	padding: 1ex;
+}
+
+.logos a {
+	padding: 1ex;
+}
+
+.logos img {
+	border: 0;
+}
+
+/* Footer */
+
+.footer {
+	text-align: center;
+	
+	font-size: 11px;
+	color: #666666;
+	padding-top: 4px;
+	margin: 0px 20px 0px 20px;  
+	border-top: 1px dotted #cccccc;
+  	
+	clear: left;
+}
+
+

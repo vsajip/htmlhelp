@@ -1,0 +1,69 @@
+as	assembly
+at-spi-cspi	gnome
+atk	gnome,gtk
+autoconf	build
+automake	build
+bashref	shell
+bfd	
+binutils	c,cxx
+bison	c
+bonobo-activation	gnome
+coreutils	shell,unix
+cpp	c,cxx
+css	css,web
+cvs	
+diff	
+elisp	
+find	shell,unix
+flex	c
+g77	fortran
+gail-libgail-util	gnome
+gawk	awk
+gawkinet	awk
+gcc	c
+gcj	java
+gconf	gnome
+gdb	c,cxx
+gdk	gnome,gtk
+gdk-pixbuf	gnome,gtk
+gfortran	fortran
+glib	gnome,gtk
+gnat-style	
+gnat_rm	
+gnat_ug_unx	
+gnome-vfs-2.0	gnome
+gnuplot	scientific
+gobject	gnome,gtk
+gpc	
+gperf	
+grep	shell,unix
+gtk	gnome,gtk
+hist	
+html	html,web
+info	
+ld	c,cxx
+libbonobo	gnome
+libbonoboui	gnome
+libc	c
+libglade	gnome
+libgnome	gnome
+libgnomecanvas	gnome
+libgnomeui	gnome
+libtool	build
+m4	build
+make	build
+mysql_internals	sql
+mysql_manual	sql
+Numeric	python
+ORBit2	gnome
+pango	gnome,gtk
+perl	perl
+Python	python
+rlman	
+rluserman	
+sed	shell,unix
+tar	shell,unix
+texinfo	tex
+which	shell,unix
+xhtml	html,web,xml
+xml	xml

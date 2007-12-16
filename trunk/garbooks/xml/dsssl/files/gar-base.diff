@@ -1,0 +1,11 @@
+diff --speed-large-files --minimal -Nru tmp/helpsrc/dsssl.hhp work/helpsrc/dsssl.hhp
+--- tmp/helpsrc/dsssl.hhp	1998-10-27 07:19:52.000000000 +0000
++++ work/helpsrc/dsssl.hhp	2003-05-30 12:01:46.000000000 +0100
+@@ -7,6 +7,7 @@
+ Full-text search=Yes
+ Index file=Index.hhk
+ Language=0x409 English (United States)
++Title=Document Style Semantics and Specification Language (DSSSL)
+ 
+ [FILES]
+ notes.htm

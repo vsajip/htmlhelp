@@ -1,0 +1,47 @@
+				 Hacking Notes
+
+
+= XUL =
+
+- http://www.xulplanet.com
+
+
+- http://lxr.mozilla.org/seamonkey/source/extensions/help/resources/content/
+
+- http://trac.nunatak.com.au/projects/nufox
+
+== Remote Applications ==
+
+- http://www.mozilla.org/docs/tutorials/sitenav/
+
+- http://books.mozdev.org/chapters/ch12.html
+
+- http://www.oreillynet.com/pub/a/mozilla/2002/12/17/app_dev.html
+
+- http://www.oreillynet.com/pub/a/mozilla/2003/05/02/casestudy2.html
+
+== Skinning ==
+
+- [XULNotes: Skinning XUL Files By Hand http://www.mozilla.org/docs/xul/xulnotes/xulnote_skins.html]
+
+- [Writing Skinnable XUL and CSS http://www.mozilla.org/xpfe/skins.html]
+
+
+= JavaScript =
+
+ - [Popup Windows http://www.yourhtmlsource.com/javascript/popupwindows.html]
+
+ - [Monitoring Frames http://developer.irt.org/script/971.htm]
+
+== AJAX ==
+
+ - http://www.phpbuilder.com/columns/kassemi20050606.php3
+ - http://www.teencoderz.com/forums2/articles.php?action=viewarticle&artid=39
+
+
+= Web Design Ideas =
+
+ - http://msdn.microsoft.com/library/default.asp
+ - http://www.php.net/manual/en/
+ - http://dev.mysql.com/doc/mysql/en/index.html
+ - http://www.go-mono.com/docs/

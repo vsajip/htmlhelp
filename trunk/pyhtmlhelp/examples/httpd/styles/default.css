@@ -1,0 +1,109 @@
+/* General */
+
+body {
+	color: black;
+	background-color: white;
+
+	font-family: verdana, tahoma, helvetica, arial, sans-serif;
+	font-size: 12px;
+
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Header */
+
+.header {
+	font-size: 36px;
+
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+/* Menubar */
+
+.menubar {
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.menubar a, .menubar span {
+	font-weight: bold;
+	
+	padding-left: 8px;
+	padding-right: 8px;
+}  
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+
+/* Search */
+
+.search {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/* Sidebar */
+
+div.sidebar {
+	width: 256px;
+
+	float: left;
+	clear: left;
+}
+
+.sidebar {
+	font-size: 11px;
+}
+
+.sidebar a {
+	text-decoration: none;
+	display: block;
+}
+
+.sidebar li {
+	list-style-type: none;
+}
+
+.sidebar ul {
+	margin: 0px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.sidebar ul {
+	padding-left: 2px;
+}
+
+.sidebar ul ul {
+	padding-left: 16px;
+}
+
+
+/* Catalog */
+
+#catalog {
+	font-size: 16px;
+
+	margin-top: 128px;
+	margin-bottom: 128px;
+	margin-left: 256px;
+	margin-right: 256px;
+}

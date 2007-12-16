@@ -1,0 +1,5 @@
+include COPYING
+include TODO
+include test/*.py
+recursive-include test/data *
+recursive-exclude test/data Makefile *.py?
