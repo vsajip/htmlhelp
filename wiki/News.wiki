@@ -1,4 +1,4 @@
-#summary News
+#summary Project News
 #labels Featured
 
 *2007-03-28*: Migrate the site to MediaWiki.
