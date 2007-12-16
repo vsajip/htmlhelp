@@ -1,0 +1,35 @@
+#summary pyhtmlhelp html help book conversion utility
+#labels Tool,Featured
+
+= Introduction =
+
+pyhtmlhelp is tool written in Python for converting among CHM, HTB, and DevHelp formats.
+
+= Requirements =
+
+ * Python 2.3 or greater
+ * [http://cheeseshop.python.org/pypi/ctypes ctypes]
+ * On Windows:
+   * [http://cheeseshop.python.org/pypi/comtypes comtypes] to read CHMs
+   * [http://msdn.microsoft.com/library/en-us/htmlhelp/html/vsconHH1Start.asp Microsoft HTML Help 1.3 SDK] to create CHMs
+ * On Unix:
+  * [http://www.jedrea.com/chmlib/ CHMLIB] to read CHMs
+
+= Usage =
+
+Simply run:
+{{{
+  hhconvert.py <src-file> <dst-file>
+}}}
+to convert from src-file to dst-file. The formats will be guessed from the file
+extensions.
+
+= Supported formats =
+
+|| *Format* || *Read* || *Write* || *Recognized extensions* ||
+|| [CHM] || Yes || Yes || .chm ||
+|| [DevHelp] || Yes || Yes || .tar, .tgz ||
+|| [HTB] || Yes || Yes || .htb, .zip ||
+|| [WinHelp] || No || No || - ||
+
+NOTE: Writing CHMs is only supported on Windows.
