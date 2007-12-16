@@ -1,0 +1,22 @@
+#summary News
+#labels Featured
+
+*2007-03-28*: Migrate the site to MediaWiki
+
+*2007-03-16*: First public release of pyhtmlhelp 
+  Pyhtmlhelp is a tool written in Python which allows to convert books from/to CHM, HTB, and DevHelp formats. Available from the [http://developer.berlios.de/project/filelist.php?group_id=918 download page].
+
+*2005-10-20*: The http://htmlhelp.dotsrc.org/ site has been launched. It provides many HTML Help books with a simple, efficient web-based interface.
+
+*2005-03-31*: Updated CHM and HTB books
+
+*2004-11-13*: The existing subversion repository was imported into Berlios repository.
+
+*2004-02-10*: Perl Documentation in CHM format
+  After quite some struggle I managed to get the Perl documentation in CHM (and HTB) format. It still has some quirks, but at least it looks good - it uses the CSS stylesheet from [http://www.perldoc.com/]. As usual, the whole process is automated (nicely into a pair of shell scripts) so that newer perl versions can be tracked without effort.
+
+*2004-01-31*: Converting from any format to DevHelp book -- It is now possible to generate DevHelp books from other formats (such as CHM, and HTB) using the HTML Help Python API. .
+
+*2004-01-23* Python API documentation -- Wrote a little more about the current status of the [http://htmlhelp.berlios.de/api/python/ Python API] and included [http://htmlhelp.berlios.de/api/python/html/ reference documentation generated from source].
+
+*2004-01-20* Remote XUL interface -- Added a *remote* XUL interface to the PHP web interface for Gecko-based browsers.
