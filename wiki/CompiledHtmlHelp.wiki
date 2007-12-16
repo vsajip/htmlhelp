@@ -1,0 +1,39 @@
+#labels CHM,Format
+=Authoring=
+
+The [http://msdn.microsoft.com/library/en-us/htmlhelp/html/vsconHH1Start.asp  Microsoft HTML Help 1.3 SDK] is the official way to create CHM's. The HTML Help Compiler (HHC) takes a HTML Help Project (HHP) file with metadata, a HTML Help Contents (HHC) with the table of contents, and a HTML Help Index (HHK) with the index keywords, and the HTML pages, producing a CHM.
+
+[http://bonedaddy.net/pabs3/hhm/ HTML Help Maker] is an open-source project which plans to allow the creation of CHM's
+
+Many open-source tools automatically generate the HHP, HHC, and HHK together with the HTML output. Especially worth noting are:
+
+ * [http://docbook.sourceforge.net/projects/xsl/index.html DocBook XSL Stylesheets]
+ * [http://www.doxygen.org/ Doxygen]
+
+=Format=
+
+Microsoft never released the format specification, but there are a few reverse engineered descriptions of the format:
+
+ * [http://savannah.nongnu.org/projects/chmspec Unofficial CHM Specification]
+ * Matthew Russotto's [http://www.speakeasy.org/~russotto/chm/chmformat.html Microsoft's HTML Help format] description
+
+There are some tools which allow to read the contents of CHM files:
+
+ * [http://66.93.236.84/~jedwin/projects/chmlib/ CHMLIB]
+ * [http://www.kyz.uklinux.net/libmspack/ libmspack] — a library for Microsoft compression formats
+
+=Viewers=
+
+ * Microsoft HTML Help Viewer
+ * [http://xchm.sourceforge.net/ xCHM] — a CHM viewer for UNIX (Linux, BSD, Solaris), written by Razvan Cojocaru
+ * [http://www.jouledata.com/MacProducts.html JouleData Solutions' CHM Viewer] — a comercial 100% native Cocoa .chm file viewer for the Mac OS X platform
+ * [http://gnochm.sourceforge.net/ GnoCHM] — a CHM file viewer. It is designed to integrate nicely with Gnome.
+ * [http://www.herdsoft.com/linux/themen/chmviewer.html chmviewer]
+ * [http://211.92.88.40/~zhong/ ChmSee]
+ * [http://chmox.sourceforge.net/ Chmox] — a Mac OS X CHM viewer
+ * [http://www.kchmviewer.net/ KchmViewer] — a Qt/KDE based viewer of CHM files
+
+=Links=
+
+ * [http://www.speakeasy.org/~russotto/chm/ HTML Help (CHM) Tools and Information]
+ * [http://www.helpware.net/ Helpware]
