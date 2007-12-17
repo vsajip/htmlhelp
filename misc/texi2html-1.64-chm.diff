@@ -1,0 +1,279 @@
+--- texi2html	2003-12-05 15:27:19.000000000 +0000
++++ texi2chm	2003-12-05 15:00:42.000000000 +0000
+@@ -239,7 +239,7 @@
+ 
+ # -menu | -nomenu
+ # if set, show the Texinfo menus
+-$T2H_SHOW_MENU = 1;
++$T2H_SHOW_MENU = 0;
+ $T2H_OPTIONS -> {menu} =
+ {
+  type => '!',
+@@ -271,8 +271,8 @@
+ # (resp. chapter) and separate pages for Top, ToC, Overview, Index,
+ # Glossary, About.
+ # otherwise, create monolithic html file which contains whole document
+-#$T2H_SPLIT = 'section';
+-$T2H_SPLIT = '';
++$T2H_SPLIT = 'section';
++#$T2H_SPLIT = '';
+ $T2H_OPTIONS -> {split} =
+ {
+  type => '=s',
+@@ -913,6 +913,7 @@
+ {
+   my $fh = shift; 
+   my $longtitle = "$T2H_THISDOC{title}: $T2H_NAME{This}";
++  $longtitle = &remove_html($longtitle);
+   print $fh <<EOT;
+ <HTML>
+ $T2H_DOCTYPE
+@@ -940,65 +941,18 @@
+ {
+   my $fh = shift;
+   print $fh <<EOT;
+-<BR>  
+-<FONT SIZE="-1">
+-This document was generated
+-$T2H_ADDRESS
+-using <A HREF="$T2H_HOMEPAGE"><I>texi2html</I></A>
+ $T2H_PRE_BODY_CLOSE
+ </BODY>
+ </HTML>
+ EOT
+ }
+ 
+-###################################################################
+-# Layout of navigation panel
+-
+-# if this is set, then a vertical navigation panel is used
+-$T2H_VERTICAL_HEAD_NAVIGATION = 0;
+ sub T2H_DEFAULT_print_head_navigation
+ {
+-  my $fh = shift;
+-  if ($T2H_VERTICAL_HEAD_NAVIGATION)
+-  {
+-    print $fh <<EOT;
+-<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+-<TR VALIGN="TOP">
+-<TD ALIGN="LEFT">
+-EOT
+-  }
+-  &$T2H_print_navigation($fh, $T2H_VERTICAL_HEAD_NAVIGATION);
+-  if ($T2H_VERTICAL_HEAD_NAVIGATION)
+-  {
+-    print $fh <<EOT;
+-</TD>
+-<TD ALIGN="LEFT">
+-EOT
+-  }
+-  elsif ($T2H_SPLIT eq 'section')
+-  {
+-    print $fh "<HR SIZE=1>\n";
+-  }
+ }
+ 
+-# Specifies the minimum page length required before a navigation panel
+-# is placed at the bottom of a page (the default is that of latex2html)
+-# T2H_THIS_WORDS_IN_PAGE holds number of words of current page
+-$T2H_WORDS_IN_PAGE = 300;
+ sub T2H_DEFAULT_print_foot_navigation
+ {
+-  my $fh = shift;
+-  my $nwords = shift;
+-  if ($T2H_VERTICAL_HEAD_NAVIGATION)
+-  {
+-    print $fh <<EOT;
+-</TD>
+-</TR>
+-</TABLE>
+-EOT
+-  }
+-  print $fh "<HR SIZE=1>\n";
+-  &$T2H_print_navigation($fh) if ($nwords >= $T2H_WORDS_IN_PAGE)
+ }
+ 
+ ######################################################################
+@@ -1147,9 +1101,11 @@
+ sub T2H_DEFAULT_print_frame
+ {
+   my $fh = shift;
++  my $title = $T2H_THISDOC{title};
++  $title = &remove_html($title);
+   print $fh <<EOT;
+ <HTML>
+-<HEAD><TITLE>$T2H_THISDOC{title}</TITLE></HEAD>
++<HEAD><TITLE>$title</TITLE></HEAD>
+ <FRAMESET cols="140,*"> 
+   <FRAME name=toc  src="$docu_toc_frame_file">
+   <FRAME name=main src="$docu_doc">
+@@ -2371,6 +2327,12 @@
+ 
+ $docu_doc = "$docu_name.$docu_ext";		# document's contents
+ $docu_doc_file = "$docu_rdir$docu_doc";
++$docu_hhp = "$docu_name.hhp";
++$docu_hhp_file = "$docu_rdir$docu_hhp";
++$docu_hhc = "$docu_name.hhc";
++$docu_hhc_file = "$docu_rdir$docu_hhc";
++$docu_hhk = "$docu_name.hhk";
++$docu_hhk_file = "$docu_rdir$docu_hhk";
+ if ($T2H_SPLIT) 
+ {
+   $docu_toc  = $T2H_TOC_FILE || "${docu_name}_toc.$docu_ext"; # document's table of contents
+@@ -2942,6 +2904,9 @@
+ @lines = ();				# whole document
+ @toc_lines = ();			# table of contents
+ @stoc_lines = ();			# table of contents
++@hhp_lines = ();			# HTML Help project
++@hhc_lines = ();			# HTML Help table of contents
++@hhk_lines = ();			# HTML Help index
+ $curlevel = 0;				# current level in TOC
+ $node = '';				# current node name
+ $node_next = '';                        # current node next name               
+@@ -3640,10 +3605,12 @@
+ 		    while ($level > $curlevel) {
+ 		      $curlevel++;
+ 		      push(@toc_lines, "<UL>\n");
++		      push(@hhc_lines, "<UL>\n");
+ 		    }
+ 		    while ($level < $curlevel) {
+ 		      $curlevel--;
+ 		      push(@toc_lines, "</UL>\n");
++		      push(@hhc_lines, "</UL>\n");
+ 		    }
+ 		    $_ = &t2h_anchor($tocid, "$docu_doc#$docid", $name, 1);
+ 		    $_ = &substitute_style($_);
+@@ -3656,6 +3623,9 @@
+ 		    {
+ 		      push(@toc_lines, "<LI>" . $_ ."</LI>");
+ 		    }
++		    $_ = $name;
++		    $_ = &remove_html($_);
++		    push(@hhc_lines, "<LI> <OBJECT type=\"text/sitemap\"> <param name=\"Name\" value=\"$_\"> <param name=\"Local\" value=\"$docu_doc#$docid\"> </OBJECT> </LI>\n");
+ 		  }
+ 		  else
+ 		  {
+@@ -3776,6 +3746,7 @@
+ while ($level < $curlevel) {
+     $curlevel--;
+     push(@toc_lines, "</UL>\n");
++    push(@hhc_lines, "</UL>\n");
+ }
+ 
+ print "# end of pass 1\n" if $T2H_VERBOSE;
+@@ -4048,6 +4019,17 @@
+     }
+   }
+ 
++  {
++    my $key;
++
++    for $key (sort keys %$Entries)
++    {
++      $_ = $key;
++      $_ = remove_html($_);
++      push(@hhk_lines, "<LI> <OBJECT type=\"text/sitemap\"> <param name=\"Name\" value=\"$_\"> <param name=\"Local\" value=\"$Entries->{$key}->{href}\"> </OBJECT> </LI>\n");
++    }
++  }
++    
+   my $Pages = GetIndexPages($Entries);
+   my $page;
+   my $first_page = shift @$Pages;
+@@ -4717,6 +4699,7 @@
+     $file =~ s/\#.*$//;
+     open(FILE, "> $docu_rdir$file") || 
+       die "$ERROR: Can't open $docu_rdir$file for writing: $!\n";
++    push(@hhp_lines, "$docu_rdir$file\n");
+     $FH = \*FILE;
+     &$T2H_print_page_head($FH);
+     t2h_print_label($FH);
+@@ -4811,6 +4794,73 @@
+   close(FILE) if $T2H_SPLIT;
+ }
+ 
++{
++  my $title = $T2H_THISDOC{title};
++  $title = &remove_html($title);
++
++  print "# writing HTML Help project in $docu_hhp_file...\n" if $T2H_VERBOSE;
++  open (FILE, "> $docu_hhp_file") || die "$ERROR: Can't open $docu_hhp_file for writing: $!\n";
++  print FILE "[OPTIONS]\n";
++  print FILE "Compiled file=$docu_name.chm\n";
++  print FILE "Contents file=$docu_hhc\n";
++  print FILE "Default Window=Default\n";
++  print FILE "Default topic=$docu_top\n";
++  print FILE "Full-text search=Yes\n";
++  print FILE "Index file=$docu_hhk\n";
++  print FILE "Language=0x409 English (United States)\n";
++  print FILE "Title=$title\n";
++  print FILE "\n";
++  print FILE "[WINDOWS]\n";
++  print FILE "Default=,\"$docu_hhc\",\"$docu_hhk\",\"$docu_top\",\"$docu_top\",,,,,0x22520,,0x384e,,,,,,,,0\n";
++  print FILE "\n";
++  print FILE "[FILES]\n";
++  print FILE "$docu_top\n";
++  
++  $T2H_THIS_SECTION = \@hhp_lines;
++  t2h_print_lines(\*FILE);
++  print FILE "$docu_foot\n" if (@foot_lines);
++  
++  close(FILE);
++}
++
++if (@hhc_lines)
++{
++  my $title = $T2H_THISDOC{title};
++  $title = &remove_html($title);
++  
++  print "# writing HTML Help table of contents in $docu_hhc_file...\n" if $T2H_VERBOSE;
++  open (FILE, "> $docu_hhc_file") || die "$ERROR: Can't open $docu_hhc_file for writing: $!\n";
++
++  print FILE "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML//EN\">\n";
++  print FILE "<HTML>\n";
++  print FILE "<BODY>\n";
++  print FILE "<UL>\n";
++  print FILE "<LI> <OBJECT type=\"text/sitemap\"> <param name=\"Name\" value=\"$title\"> <param name=\"Local\" value=\"$docu_top\"> </OBJECT> </LI>\n";
++  $T2H_THIS_SECTION = \@hhc_lines;
++  t2h_print_lines(\*FILE);
++  print FILE "</UL>\n";
++  print FILE "</BODY>\n";
++  print FILE "</HTML>\n";
++  
++  close(FILE);
++}
++
++if (@hhk_lines)
++{
++  print "# writing HTML Help table of contents in $docu_hhk_file...\n" if $T2H_VERBOSE;
++  open (FILE, "> $docu_hhk_file") || die "$ERROR: Can't open $docu_hhk_file for writing: $!\n";
++
++  print FILE "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML//EN\">\n";
++  print FILE "<HTML>\n";
++  print FILE "<BODY>\n";
++  $T2H_THIS_SECTION = \@hhk_lines;
++  t2h_print_lines(\*FILE);
++  print FILE "</BODY>\n";
++  print FILE "</HTML>\n";
++  
++  close(FILE);
++}
++
+ unless ($T2H_SPLIT)
+ {
+   &$T2H_print_page_foot(\*FILE);
+@@ -5385,6 +5435,15 @@
+     return($what);
+ }
+ 
++sub remove_html {
++    local($what) = @_;
++    # remove html tags
++    $what =~ s/\<.*?\>//g;
++    # replace characters entities
++    $what =~ s/"/\\"/g;
++    return($what);
++}
++
+ sub unprotect_texi {
+     s/$;0/\@/go;
+     s/$;1/\{/go;
