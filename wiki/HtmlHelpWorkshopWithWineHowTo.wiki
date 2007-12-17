@@ -30,7 +30,7 @@ cabextract -d MFC40i MFC40i.exe
 cp -a MFC40i/mfc40.dll ~/.wine/drive_c/windows/system/
 }}}
 
-Alternatively, download [http://htmlhelp.berlios.de/howto/htmlhelp.reg htmlhelp.reg] and the [http://htmlhelp.berlios.de/howto/htmlhelp.sh htmlhelp.sh] script, which will do all the work above for you.
+Alternatively, download [http://htmlhelp.googlecode.com/svn/trunk/misc/htmlhelp.reg htmlhelp.reg] and the [http://htmlhelp.googlecode.com/svn/trunk/misc/htmlhelp.sh htmlhelp.sh] script, which will do all the work above for you.
 
 =Usage=
 

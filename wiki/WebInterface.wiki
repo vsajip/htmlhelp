@@ -1,4 +1,4 @@
-#labels Tool
+﻿#labels Tool
 = Why a web interface?=
 
 Using a web interfaces for a book repository has many advantages, such as platform independence and remote access. Since nowadays a web browser is mostly a commodity it becomes a privileged way to browse through a book collection.
@@ -34,7 +34,7 @@ Server requirements:
 
 ==Download==
 
-At the moment the source is only available from its [svn://svn.berlios.de/htmlhelp/web/php/ Subversion repository].
+At the moment the source is only available from its [http://htmlhelp.googlecode.com/svn/trunk/phphtmlhelp/ Subversion repository].
 
 
 =Links=

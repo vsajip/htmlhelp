@@ -24,6 +24,6 @@ DevHelp is before all a help viewer. See its [http://www.imendio.com/projects/de
 
 =Miscellaneous=
 
- * [http://htmlhelp.berlios.de/formats/devhelp2chm.sh devhelp2chm.sh] — is a script to convert DevHelp bookname into a CHM file, written by Ralgh Young.
+ * [http://htmlhelp.googlecode.com/svn/trunk/misc/devhelp2chm.sh devhelp2chm.sh] — is a script to convert DevHelp bookname into a CHM file, written by Ralgh Young.
 
 =Links=
