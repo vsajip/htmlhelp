@@ -21,7 +21,8 @@ BOOKS = \
 	$(WORKSRC)/bfd/doc/bfd.texinfo \
 	$(WORKSRC)/binutils/doc/binutils.texi \
 	$(WORKSRC)/gas/doc/as.texinfo \
-	$(WORKSRC)/ld/ld.texinfo
+	$(WORKSRC)/ld/ld.texinfo \
+	$(WORKSRC)/gprof/gprof.texi
 
 NODIST_BOOKS = \
 	$(WORKSRC)/bfd/doc/bfdint.texi \
