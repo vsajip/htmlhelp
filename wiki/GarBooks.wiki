@@ -11,7 +11,7 @@ Here it is used to automate the download the sources, extract, patch, configure 
 
 You can download the source from its [http://htmlhelp.googlecode.com/svn/trunk/garbooks/ Subversion repository].
 
-== Requirements ==
+= Requirements =
 
 To build all the books you will need:
  * A POSIX environment, such as [http://www.debian.org/ Linux] or [http://www.cygwin.com/ Cygwin].
