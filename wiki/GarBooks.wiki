@@ -9,7 +9,7 @@ Here it is used to automate the download the sources, extract, patch, configure 
 
 = Download =
 
-You can download the source from its [http://code.google.com/p/htmlhelp/source Subversion repository].
+You can download the source from its [http://htmlhelp.googlecode.com/svn/trunk/garbooks/ Subversion repository].
 
 == Requirements ==
 
