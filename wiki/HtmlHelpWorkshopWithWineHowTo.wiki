@@ -20,14 +20,15 @@ WINEDLLOVERRIDES="advpack=n" wine htmlhelp.exe
 }}}
  # Install ITSS.DLL as: 
 {{{
-cabextract -d htmlhelp htmlhelp.exe
-cabextract -d hhupd htmlhelp/hhupd.exe
-cp -a hhupd/itss.dll ~/.wine/drive_c/windows/system32/
+cabextract -F hhupd.exe htmlhelp.exe
+cabextract -F itss.dll hhupd.exe
+cp -a itss.dll ~/.wine/drive_c/windows/system32/
 }}}
- # Download [http://download.microsoft.com/download/sql65/Patch/6.5/WIN98/EN-US/MFC40i.exe Microsoft Foundation Classes update], extract it, and install it as: 
+ # Download [http://activex.microsoft.com/controls/vc/mfc40.cab Microsoft Foundation Classes update], extract it, and install it as: 
 {{{
-cabextract -d MFC40i MFC40i.exe
-cp -a MFC40i/mfc40.dll ~/.wine/drive_c/windows/system/
+wget http://activex.microsoft.com/controls/vc/mfc40.cab
+cabextract mfc40.cab
+wine mfc40.exe
 }}}
 
 Alternatively, download [http://htmlhelp.googlecode.com/svn/trunk/misc/htmlhelp.reg htmlhelp.reg] and the [http://htmlhelp.googlecode.com/svn/trunk/misc/htmlhelp.sh htmlhelp.sh] script, which will do all the work above for you.
