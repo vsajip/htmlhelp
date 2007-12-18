@@ -1,12 +1,12 @@
 #summary Microsoft HTML Help Workshop with WINE How-to
 #labels HowTo,CHM
 
-=Prerequisites=
+=Requirements=
 
- * WINE:
+ * [http://www.winehq.org/ WINE]
    * It's assumed you have an empty WINE environment. Installed software in an existing WINE enviroment may cause conflicts during the installation steps below.
    * The following instructions were tested with WINE verion 0.9.9. Your mileage with other version will likely vary.
- * You'll also need to get and install [http://www.kyz.uklinux.net/cabextract.php cabextract].
+ * [http://www.kyz.uklinux.net/cabextract.php cabextract]
 
 =Setup=
 
