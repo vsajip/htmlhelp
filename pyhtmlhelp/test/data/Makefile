@@ -1,9 +1,7 @@
 HHC = "C:/Program Files/HTML Help Workshop/hhc.exe"
 
 ifeq ($(WINDIR),)
-WINE = wine
-WINE_FLAGS = 
-HHC := $(WINE) $(WINE_FLAGS) -- $(HHC)
+HHC := wine $(HHC)
 endif
 
 all: \
