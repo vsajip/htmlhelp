@@ -33,8 +33,6 @@ extensions.
 || [HTB] || Yes || Yes || .htb, .zip ||
 || [WinHelp] || No || No || ||
 
-NOTE: Writing CHMs is only supported on Windows.
-
 = Download =
 
  * [http://htmlhelp.googlecode.com/files/pyhtmlhelp-0.4.tar.gz Latest release]
