@@ -10,7 +10,7 @@
 
 =Setup=
 
- # Set WINE's Windows version to Windows 2000 (or above), and add an override to use the native itss.dll, both via winecfg: 
+ # Set WINE's Windows version to Windows 2000 (or above), and add an override to use the native `itss.dll`, both via `winecfg`: 
 {{{
 wine winecfg
 }}}
@@ -18,7 +18,7 @@ wine winecfg
 {{{
 wine htmlhelp.exe
 }}}
- # Install ITSS.DLL as: 
+ # Install `itircl.dll` and `itss.dll` as: 
 {{{
 cabextract -F hhupd.exe htmlhelp.exe
 cabextract -F itircl.dll hhupd.exe
