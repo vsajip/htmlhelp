@@ -2,7 +2,9 @@
 
 set -e
 
-DEVHELP=~/.devhelp
+# NOTE: DevHelp authors change the book location every minor update, so YMMV...
+XDG_DATA_HOME=${XDG_DATA_HOME:=$HOME/.local/share}
+DEVHELP="$XDG_DATA_HOME/devhelp"
 
 for BOOK
 do
