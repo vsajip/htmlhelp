@@ -13,7 +13,7 @@ This is the procedure currently used to generate the CHM books from the GNU docu
 
 =Using an adapted version of `texi2html`=
 
-Once I modified <code>texi2html</code> to generate the .HHP, .HHC, and .HHK files, and for a long time this was the procedure I use to generate all the CHM books from the GNU documentation manuals. Unfortunately the base <code>texi2html</code> code was unmaintained for some time and progressively required more pre- and post- processing of the documents in order to convert the newer documentation. (Maintaining the code myself was not at option as I lacked the perl knowledge to do so.)
+Once I modified `texi2html` to generate the .HHP, .HHC, and .HHK files, and for a long time this was the procedure I use to generate all the CHM books from the GNU documentation manuals. Unfortunately the base `texi2html` code was unmaintained for some time and progressively required more pre- and post- processing of the documents in order to convert the newer documentation. (Maintaining the code myself was not at option as I lacked the perl knowledge to do so.)
 
 You can still get the script [http://htmlhelp.googlecode.com/svn/trunk/misc/texi2chm here] (diff [http://htmlhelp.googlecode.com/svn/trunk/misc/texi2html-1.64-chm.diff here]).
 
