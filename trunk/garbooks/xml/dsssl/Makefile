@@ -1,6 +1,6 @@
 GARNAME = dsssl
-MASTER_SITES = ftp://ftp.ornl.gov/pub/sgml/wg8/$(GARNAME)/
-DISTFILES = helpsrc.zip
+MASTER_SITES = http://xml.coverpages.org/
+DISTFILES = dsssl-walsh-helpsrc.zip
 PATCHFILES = gar-base.diff
 
 BOOKS = dsssl
