@@ -17,9 +17,9 @@ html_parts_re = re.compile(r'(.*?<body(?:\s.*?)?>)(.*?)(</body\s*>.*?)', re.IGNO
 
 html_title_re = re.compile(r'<title(?:\s.*?)?>(.*?)</title\s*>', re.IGNORECASE | re.DOTALL)
 
-html_headings_re = re.compile(r'<h[2-4]><a .*?name="(.*?)".*?>(.*?)</h[2-4]>', re.IGNORECASE | re.DOTALL)
+html_headings_re = re.compile(r'<h[2-4]><a\s.*?name="(.*?)".*?>(.*?)</h[2-4]>', re.IGNORECASE | re.DOTALL)
 
-html_anchors_re = re.compile(r'<a .*?name="(.*?)".*?>', re.IGNORECASE | re.DOTALL)
+html_anchors_re = re.compile(r'<a\s.*?name="(.*?)".*?>', re.IGNORECASE | re.DOTALL)
 
 html_tag_re = re.compile(r'<.*?>', re.DOTALL)
 
