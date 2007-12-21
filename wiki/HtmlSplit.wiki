@@ -1,0 +1,19 @@
+#summary Split a HTML page into multiple pages along the headers.
+#labels Tool
+
+= Introduction =
+
+This is a python script to split a HTML page into multiple pages.
+
+It was tested with the [http://www.w3.org/ w3c specifications]. It will likely fail with other files without change.
+
+= Usage =
+
+{{{
+htmlsplit.py html ...
+}}}
+
+
+= Download =
+
+  * [http://htmlhelp.googlecode.com/svn/trunk/garbooks/scripts/htmlsplit.py Subversion repository]
