@@ -27,8 +27,8 @@ XSLTPROC_FLAGS_HTMLHELP = \
 	--param section.label.includes.component.label 1 \
 	--param chunk.first.sections 1
 
-#HTMLHELP_XSL = /usr/share/sgml/docbook/stylesheet/xsl/nwalsh/htmlhelp/htmlhelp.xsl
-HTMLHELP_XSL = /usr/share/docbook-xsl/htmlhelp/htmlhelp.xsl
+HTMLHELP_XSL = /usr/share/xml/docbook/stylesheet/nwalsh/htmlhelp/htmlhelp.xsl
+#HTMLHELP_XSL = /usr/share/docbook-xsl/htmlhelp/htmlhelp.xsl
 
 xml-mshh/%: %
 	@echo -e " $(WORKCOLOR)==> Converting $(BOLD)$*$(NORMALCOLOR)"
