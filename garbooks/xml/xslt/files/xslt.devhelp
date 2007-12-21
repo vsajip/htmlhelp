@@ -3,7 +3,102 @@
 	<chapters>
 		<sub name="Abstract" link="abstract.html"/>
 		<sub name="Status of this Document" link="status.html"/>
+		<sub name="1 Introduction" link="section-Introduction.html"/>
+		<sub name="2 Stylesheet Structure" link="section-Stylesheet-Structure.html">
+			<sub name="2.1 XSLT Namespace" link="xslt-namespace.html"/>
+			<sub name="2.2 Stylesheet Element" link="stylesheet-element.html"/>
+			<sub name="2.3 Literal Result Element as Stylesheet" link="result-element-stylesheet.html"/>
+			<sub name="2.4 Qualified Names" link="qname.html"/>
+			<sub name="2.5 Forwards-Compatible Processing" link="forwards.html"/>
+			<sub name="2.6 Combining Stylesheets" link="section-Combining-Stylesheets.html">
+				<sub name="2.6.1 Stylesheet Inclusion" link="include.html"/>
+				<sub name="2.6.2 Stylesheet Import" link="import.html"/>
+		</sub>
+			<sub name="2.7 Embedding Stylesheets" link="section-Embedding-Stylesheets.html"/>
+		</sub>
+		<sub name="3 Data Model" link="data-model.html">
+			<sub name="3.1 Root Node Children" link="root-node-children.html"/>
+			<sub name="3.2 Base URI" link="base-uri.html"/>
+			<sub name="3.3 Unparsed Entities" link="unparsed-entities.html"/>
+			<sub name="3.4 Whitespace Stripping" link="strip.html"/>
+		</sub>
+		<sub name="4 Expressions" link="section-Expressions.html"/>
+		<sub name="5 Template Rules" link="rules.html">
+			<sub name="5.1 Processing Model" link="section-Processing-Model.html"/>
+			<sub name="5.2 Patterns" link="patterns.html"/>
+			<sub name="5.3 Defining Template Rules" link="section-Defining-Template-Rules.html"/>
+			<sub name="5.4 Applying Template Rules" link="section-Applying-Template-Rules.html"/>
+			<sub name="5.5 Conflict Resolution for Template Rules" link="conflict.html"/>
+			<sub name="5.6 Overriding Template Rules" link="apply-imports.html"/>
+			<sub name="5.7 Modes" link="modes.html"/>
+			<sub name="5.8 Built-in Template Rules" link="built-in-rule.html"/>
+		</sub>
+		<sub name="6 Named Templates" link="named-templates.html"/>
+		<sub name="7 Creating the Result Tree" link="section-Creating-the-Result-Tree.html">
+			<sub name="7.1 Creating Elements and Attributes" link="section-Creating-Elements-and-Attributes.html">
+				<sub name="7.1.1 Literal Result Elements" link="literal-result-element.html"/>
+				<sub name="7.1.2 Creating Elements with xsl:element" link="section-Creating-Elements-with-xsl:element.html"/>
+				<sub name="7.1.3 Creating Attributes with xsl:attribute" link="creating-attributes.html"/>
+				<sub name="7.1.4 Named Attribute Sets" link="attribute-sets.html"/>
+			</sub>
+			<sub name="7.2 Creating Text" link="section-Creating-Text.html"/>
+			<sub name="7.3 Creating Processing Instructions" link="section-Creating-Processing-Instructions.html"/>
+			<sub name="7.4 Creating Comments" link="section-Creating-Comments.html"/>
+			<sub name="7.5 Copying" link="copying.html">
+			<sub name="7.6 Computing Generated Text" link="section-Computing-Generated-Text.html"/>
+				<sub name="7.6.1 Generating Text with xsl:value-of" link="value-of.html"/>
+				<sub name="7.6.2 Attribute Value Templates" link="attribute-value-templates.html"/>
+			</sub>
+			<sub name="7.7 Numbering" link="number.html">
+				<sub name="7.7.1 Number to String Conversion Attributes" link="convert.html"/>
+			</sub>
+		</sub>
+		<sub name="8 Repetition" link="for-each.html"/>
+		<sub name="9 Conditional Processing" link="section-Conditional-Processing.html">
+			<sub name="9.1 Conditional Processing with xsl:if" link="section-Conditional-Processing-with-xsl:if.html"/>
+			<sub name="9.2 Conditional Processing with xsl:choose" link="section-Conditional-Processing-with-xsl:choose.html"/>
+		</sub>
+		<sub name="10 Sorting" link="sorting.html"/>
+		<sub name="11 Variables and Parameters" link="variables.html">
+			<sub name="11.1 Result Tree Fragments" link="section-Result-Tree-Fragments.html"/>
+			<sub name="11.2 Values of Variables and Parameters" link="variable-values.html"/>
+			<sub name="11.3 Using Values of Variables and Parameters with xsl:copy-of" link="copy-of.html"/>
+			<sub name="11.4 Top-level Variables and Parameters" link="top-level-variables.html"/>
+			<sub name="11.5 Variables and Parameters within Templates" link="local-variables.html"/>
+			<sub name="11.6 Passing Parameters to Templates" link="section-Passing-Parameters-to-Templates.html"/>
+		</sub>
+		<sub name="12 Additional Functions" link="add-func.html">
+			<sub name="12.1 Multiple Source Documents" link="document.html"/>
+			<sub name="12.2 Keys" link="key.html"/>
+			<sub name="12.3 Number Formatting" link="format-number.html"/>
+			<sub name="12.4 Miscellaneous Additional Functions" link="misc-func.html"/>
+		</sub>
+		<sub name="13 Messages" link="message.html"/>
+		<sub name="14 Extensions" link="extension.html">
+			<sub name="14.1 Extension Elements" link="extension-element.html"/>
+			<sub name="14.2 Extension Functions" link="section-Extension-Functions.html"/>
+		</sub>
+		<sub name="15 Fallback" link="fallback.html"/>
+		<sub name="16 Output" link="output.html">
+			<sub name="16.1 XML Output Method" link="section-XML-Output-Method.html"/>
+			<sub name="16.2 HTML Output Method" link="section-HTML-Output-Method.html"/>
+			<sub name="16.3 Text Output Method" link="section-Text-Output-Method.html"/>
+			<sub name="16.4 Disabling Output Escaping" link="disable-output-escaping.html"/>
+		</sub>
+		<sub name="17 Conformance" link="conformance.html"/>
+		<sub name="18 Notation" link="notation.html"/>
+		<sub name="A References" link="section-References.html">
+			<sub name="A.1 Normative References" link="section-Normative-References.html"/>
+			<sub name="A.2 Other References" link="section-Other-References.html"/>
+		</sub>
+		<sub name="B Element Syntax Summary" link="element-syntax-summary.html"/>
+		<sub name="C DTD Fragment for XSLT Stylesheets" link="dtd.html"/>
+		<sub name="D Examples" link="section-Examples.html">
+			<sub name="D.1 Document Example" link="section-Document-Example.html"/>
+			<sub name="D.2 Data Example" link="data-example.html"/>
+		</sub>
+		<sub name="E Acknowledgements" link="section-Acknowledgements.html"/>
+		<sub name="F Changes from Proposed Recommendation" link="section-Changes-from-Proposed-Recommendation.html"/>
+		<sub name="G Features under Consideration for Future Versions of XSLT" link="section-Features-under-Consideration-for-Future-Versions-of-XSLT.html"/>
 	</chapters>
-	<functions>
-	</functions>
 </book>
