@@ -31,7 +31,7 @@ There are some tools which allow to read the contents of CHM files:
  * [http://www.jouledata.com/MacProducts.html JouleData Solutions' CHM Viewer] — a comercial 100% native Cocoa .chm file viewer for the Mac OS X platform
  * [http://gnochm.sourceforge.net/ GnoCHM] — a CHM file viewer. It is designed to integrate nicely with Gnome.
  * [http://www.herdsoft.com/linux/themen/chmviewer.html chmviewer]
- * [http://211.92.88.40/~zhong/ ChmSee]
+ * [http://chmsee.gro.clinux.org/ ChmSee]
  * [http://chmox.sourceforge.net/ Chmox] — a Mac OS X CHM viewer
  * [http://www.kchmviewer.net/ KchmViewer] — a Qt/KDE based viewer of CHM files
 
