@@ -1,13 +1,14 @@
 GARNAME = perl
-GARVERSION = 5.8.8
+GARVERSION = 5.10.0
 MASTER_SITES = http://www.cpan.org/src/
-DISTFILES = $(GARNAME)-$(GARVERSION).tar.bz2
+DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
 
 define BLURB
  See also:
  - http://search.cpan.org/~swmcd/Pod-Tree-1.10/
  - http://search.cpan.org/~autrijus/Pod-HtmlHelp-1.1/
  - http://search.cpan.org/~pvhp/Pod2WinHlp-0.02/README
+ - http://rbach.priv.at/2007/Perl-CHM/
 endef
 
 BUILD_SCRIPTS = perldoc

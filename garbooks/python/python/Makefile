@@ -1,5 +1,5 @@
 GARNAME = python
-GARVERSION = 2.5
+GARVERSION = 2.5.1
 MASTER_SITES = http://www.python.org/ftp/python/doc/$(GARVERSION)/
 DISTFILES = html-$(GARVERSION).tar.bz2
 
@@ -11,8 +11,8 @@ BOOKS = python
 include ../../gar.mk
 
 
-#PYVERSION = $(basename $(GARVERSION))
-PYVERSION = $(GARVERSION)
+PYVERSION = $(basename $(GARVERSION))
+#PYVERSION = $(GARVERSION)
 
 convert-devhelp/python: $(FILEDIR)/py2devhelp.py
 	@rm -rf $(SCRATCHDIR)
