@@ -51,5 +51,5 @@ Many projects have an interactive web interface for their own documentation. The
 
 Another class is software which starts a local HTTP server to provide user documentation. Good examples are:
 
- * [http://www.python.org/ Python]'s <code>pydoc</code>
+ * [http://www.python.org/ Python]'s `pydoc`
  * [http://www.eclise.org/ Eclipse]'s context help system
