@@ -9,7 +9,7 @@ from ctypes import *
 if sys.platform == 'cygwin':
 	_chmlib = cdll.LoadLibrary('cygchm-0')
 else:
-	_chmlib = cdll.LoadLibrary('libchm.so')
+	_chmlib = cdll.LoadLibrary('libchm.so.1')
 
 CHM_UNCOMPRESSED = 0
 CHM_COMPRESSED   = 1

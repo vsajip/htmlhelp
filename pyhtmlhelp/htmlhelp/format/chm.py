@@ -7,6 +7,7 @@ import os.path
 import struct
 import tempfile
 import shutil
+import subprocess
 
 from htmlhelp.book import Book
 from htmlhelp.archive.chm_ import ChmArchive
@@ -109,9 +110,6 @@ class ChmFormat(Format):
 			raise ValueError, 'not a CHM file'
 
 	def write_chm(self, book, path):
-		if not sys.platform.startswith('win'):
-			raise NotImplementedError, 'Only supported on Windows platform'
-		
 		dir_ = tempfile.mkdtemp()
 		
 		name = book.name
@@ -137,7 +135,13 @@ class ChmFormat(Format):
 			fp.write(book.archive[pname].read())
 			fp.close()
 
-		os.spawnl(os.P_WAIT, 'C:\\Program Files\\HTML Help Workshop\\hhc.exe', 'hhc.exe', hhp_name)
+		hhc = 'C:\\Program Files\\HTML Help Workshop\\hhc.exe'
+		if sys.platform.startswith('win'):
+			subprocess.call([hhc, hhp_name])
+		else:
+			hhp_name = subprocess.Popen(["winepath", "-w", hhp_name], stdout=subprocess.PIPE).communicate()[0]
+			hhp_name = hhp_name.rstrip('\r\n')
+			subprocess.call(['wine', hhc, hhp_name])
 
 		shutil.move(os.path.join(dir_, name + '.chm'), path)
 		
