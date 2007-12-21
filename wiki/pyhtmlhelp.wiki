@@ -1,4 +1,4 @@
-#summary pyhtmlhelp html help book conversion utility
+#summary pyhtmlhelp HTML Help book conversion utility
 #labels Tool,Featured
 
 = Introduction =
