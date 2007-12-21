@@ -5,7 +5,7 @@
 
  * [http://www.winehq.org/ WINE]
    * It's assumed you have an empty WINE environment. Installed software in an existing WINE enviroment may cause conflicts during the installation steps below.
-   * The following instructions were tested with *WINE version 0.9.47*. Your mileage with other version will likely vary.
+   * The following instructions were tested with *WINE version 0.9.47*. Your mileage with other versions will likely vary.
  * [http://www.kyz.uklinux.net/cabextract.php cabextract]
 
 =Setup=
@@ -56,3 +56,7 @@ You can now run the workshop by doing
 {{{
 wine 'C:\Program Files\HTML Help Workshop\hhw.exe' ...
 }}}
+
+= Links =
+
+ * [http://www.tatanka.com.br/ies4linux/ IEs4Linux]
