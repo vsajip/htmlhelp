@@ -12,7 +12,7 @@ It uses a XML spec file to store the table of contents, the index, and book meta
  * [http://cvs.gnome.org/lxr/source/devhelp/dtd/devhelp-1.dtd DevHelp DTD]
  * [http://cvs.gnome.org/lxr/source/devhelp/README README for DevHelp]
 
-The books usually are distributed in a GZip'd tarball (<code>.tgz</code>) but they must decompressed before read by ''DevHelp''.
+The books usually are distributed in a GZip'd tarball (`.tgz`) but they must decompressed before read by ''DevHelp''.
 
 =Authoring=
 
