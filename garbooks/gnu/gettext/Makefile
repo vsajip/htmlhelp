@@ -1,5 +1,5 @@
 GARNAME = gettext
-GARVERSION = 0.16
+GARVERSION = 0.17
 MASTER_SITES = http://ftp.gnu.org/pub/gnu/$(GARNAME)/
 DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
 

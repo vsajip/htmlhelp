@@ -1,5 +1,5 @@
 GARNAME = tar
-GARVERSION = 1.16
+GARVERSION = 1.19
 MASTER_SITES = http://ftp.gnu.org/pub/gnu/$(GARNAME)/
 DISTFILES = $(GARNAME)-$(GARVERSION).tar.bz2
 
