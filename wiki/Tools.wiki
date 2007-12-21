@@ -1,5 +1,5 @@
 #summary Tools
 #labels Featured
 
- * [GarBooks] -- a tool to automate the generation of HTML help books from open-source software.
- * [pyhtmlhelp] -- a tool written in Python for converting among CHM, HTB, and DevHelp formats.
+ * [GarBooks] -- a tool to automate the generation of HTML help books from the documentation of open-source software projects.
+ * [pyhtmlhelp] -- a tool written in Python for converting among many HTML help book formats.
