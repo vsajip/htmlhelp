@@ -3,7 +3,7 @@
 
 = Introduction =
 
-pyhtmlhelp is a tool written in Python for converting among [CHM], [HTB], and [DevHelp] formats.
+pyhtmlhelp is a tool written in Python for converting among [CHM], [HTB], and [DevHelp] formats. Hopefully more formats will follow.
 
 = Requirements =
 
