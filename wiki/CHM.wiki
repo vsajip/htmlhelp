@@ -11,6 +11,7 @@ Many open-source tools automatically generate the HHP, HHC, and HHK together wit
 
  * [http://docbook.sourceforge.net/projects/xsl/index.html DocBook XSL Stylesheets]
  * [http://www.doxygen.org/ Doxygen]
+ * [http://ximbiot.com/texi2html/ texi2html]
 
 =Format=
 
