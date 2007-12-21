@@ -4,7 +4,9 @@ REGEDIT4
 "Version"="win2k"
 
 [HKEY_CURRENT_USER\Software\Wine\AppDefaults\hhc.exe\DllOverrides]
+"itircl"="native"
 "itss"="native"
 
 [HKEY_CURRENT_USER\Software\Wine\AppDefaults\hhw.exe\DllOverrides]
+"itircl"="native"
 "itss"="native"
