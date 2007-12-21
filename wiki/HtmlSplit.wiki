@@ -1,18 +1,16 @@
-#summary Split a HTML page into multiple pages along the headers.
+#summary Split a HTML page into multiple smaller pages
 #labels Tool
-
 = Introduction =
 
-This is a python script to split a HTML page into multiple pages.
+This is a python script to split a HTML page into multiple pages, putting each `h2` heading in a separate HTML file.
 
-It was tested with the [http://www.w3.org/ w3c specifications]. It will likely fail with other files without change.
+It was created for and tested with the [http://www.w3.org/ w3c specifications]. It will likely fail with other files without change.
 
 = Usage =
 
 {{{
 htmlsplit.py html ...
 }}}
-
 
 = Download =
 
