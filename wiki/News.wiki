@@ -1,7 +1,9 @@
 #summary Project News
 #labels Featured
 
-*2007-03-28*: Migrate the site to MediaWiki.
+*2007-12-21*: Migrated the project to [http://code.google.com/p/htmlhelp/ Google Code].
+
+  With the migration I also added new books and dropped some old books.
 
 *2007-03-16*: First public release of [pyhtmlhelp], a tool written in Python which allows to convert books from/to CHM, HTB, and DevHelp formats.
 
