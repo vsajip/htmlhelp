@@ -7,7 +7,7 @@ pyhtmlhelp is a tool written in Python for converting among [CHM], [HTB], and [D
 
 = Requirements =
 
- * Python 2.3 or greater
+ * [http://www.python.org/ Python] 2.3 or greater
  * [http://cheeseshop.python.org/pypi/ctypes ctypes]
  * On Windows:
    * [http://cheeseshop.python.org/pypi/comtypes comtypes] to read CHMs
