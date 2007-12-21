@@ -1,6 +1,6 @@
 #summary How-tos
 #labels Featured
 
- * [HtmlHelpWorkshopWithWineHowTo HTML Help Workshop with WINE How-to]
- * [TexinfoToChmHowTo Texinfo to CHM How-to]
- * [TexinfoToHlpHowTo Texinfo to WinHelp How-to]
+ * [HHW4Wine HTML Help Workshop with Wine How-to]
+ * [Texinfo2CHM Texinfo to CHM How-to]
+ * [Texinfo2WinHelp Texinfo to WinHelp How-to]

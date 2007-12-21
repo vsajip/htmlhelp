@@ -19,4 +19,4 @@ To build all the books you will need:
  * [http://xmlsoft.org/XSLT/ xsltproc]
  * [http://www.doxygen.org/ Doxygen]
  * [http://msdn.microsoft.com/library/en-us/htmlhelp/html/vsconHH1Start.asp Microsoft HTML Help SDK] to build CHM.
- * [HtmlHelpWorkshopWithWineHowTo WINE] to run the Microsoft HTML Help compiler above, if not building under Windows.
+ * [HHW4Wine Wine] to run the Microsoft HTML Help compiler above, if not building under Windows.

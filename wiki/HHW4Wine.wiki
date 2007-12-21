@@ -1,16 +1,16 @@
-#summary Microsoft HTML Help Workshop with WINE How-to
+#summary Microsoft HTML Help Workshop with Wine How-to
 #labels HowTo,CHM
 
 =Requirements=
 
- * [http://www.winehq.org/ WINE]
-   * It's assumed you have an empty WINE environment. Installed software in an existing WINE enviroment may cause conflicts during the installation steps below.
-   * The following instructions were tested with *WINE version 0.9.47*. Your mileage with other versions will likely vary.
+ * [http://www.winehq.org/ Wine]
+   * It's assumed you have an empty Wine environment. Installed software in an existing Wine enviroment may cause conflicts during the installation steps below.
+   * The following instructions were tested with *Wine version 0.9.47*. Your mileage with other versions will likely vary.
  * [http://www.kyz.uklinux.net/cabextract.php cabextract]
 
 =Setup=
 
- # Set WINE's Windows version to Windows 2000 (or above), and add an override to use the native `itss.dll`, both via `winecfg`: 
+ # Set Wine's Windows version to Windows 2000 (or above), and add an override to use the native `itss.dll`, both via `winecfg`: 
 {{{
 wine winecfg
 }}}
