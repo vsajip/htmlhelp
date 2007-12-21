@@ -35,7 +35,7 @@ extensions.
 
 = Download =
 
- * [http://htmlhelp.googlecode.com/files/pyhtmlhelp-0.4.tar.gz Latest release]
+ * [http://htmlhelp.googlecode.com/files/pyhtmlhelp-0.5.tar.gz Latest release]
  * [http://htmlhelp.googlecode.com/svn/trunk/pyhtmlhelp/ Subversion repository]
 {{{
 svn co http://htmlhelp.googlecode.com/svn/trunk/pyhtmlhelp/
