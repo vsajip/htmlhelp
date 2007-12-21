@@ -1,11 +1,9 @@
 GARNAME = flex
-GARVERSION = 2.5.4a
-MASTER_SITES = http://ftp.gnu.org/pub/non-gnu/$(GARNAME)/
-DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
+GARVERSION = 2.5.34
+MASTER_SITES = http://heanet.dl.sourceforge.net/sourceforge/$(GARNAME)/
+DISTFILES = $(GARNAME)-$(GARVERSION).tar.bz2
 
 BOOKS = $(WORKSRC)/MISC/texinfo/flex.texi
-
-WORKSRC = $(WORKDIR)/flex-2.5.4
 
 include ../../gar.mk
 

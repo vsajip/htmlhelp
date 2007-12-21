@@ -1,6 +1,6 @@
 diff --speed-large-files --minimal -Nru tmp/glibc-2.3.4/manual/Makefile work/glibc-2.3.4/manual/Makefile
---- tmp/glibc-2.5/manual/Makefile	2004-03-18 22:26:32.000000000 +0000
-+++ work/glibc-2.5/manual/Makefile	2005-03-25 17:54:09.527156048 +0000
+--- tmp/glibc-2.7/manual/Makefile	2004-03-18 22:26:32.000000000 +0000
++++ work/glibc-2.7/manual/Makefile	2005-03-25 17:54:09.527156048 +0000
 @@ -37,6 +37,7 @@
  MAKEINFO = makeinfo
  TEXI2DVI = texi2dvi

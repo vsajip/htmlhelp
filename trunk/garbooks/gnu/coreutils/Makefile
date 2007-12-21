@@ -1,5 +1,5 @@
 GARNAME = coreutils
-GARVERSION = 6.7
+GARVERSION = 6.9
 MASTER_SITES = http://ftp.gnu.org/pub/gnu/$(GARNAME)/
 DISTFILES = $(GARNAME)-$(GARVERSION).tar.bz2
 

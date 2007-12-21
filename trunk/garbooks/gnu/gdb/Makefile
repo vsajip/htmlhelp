@@ -1,5 +1,5 @@
 GARNAME = gdb
-GARVERSION = 6.6
+GARVERSION = 6.7.1
 MASTER_SITES = \
 	http://ftp.gnu.org/pub/gcc/$(GARNAME)/ \
 	ftp://sources.redhat.com/pub/$(GARNAME)/releases/

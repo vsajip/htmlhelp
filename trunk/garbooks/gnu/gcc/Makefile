@@ -1,5 +1,5 @@
 GARNAME = gcc
-GARVERSION = 4.1.2
+GARVERSION = 4.2.2
 MASTER_SITES = http://ftp.gnu.org/pub/gnu/$(GARNAME)/$(GARNAME)-$(GARVERSION)/
 DISTFILES = $(GARNAME)-$(GARVERSION).tar.bz2
 PATCHFILES = gar-base.diff
