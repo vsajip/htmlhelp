@@ -130,8 +130,11 @@ class ChmFormat(Format):
 		fp.close()
 		
 		for pname in book.archive:
-			# FIXME: make parent dirs
-			fp = file(os.path.join(dir_, pname), 'wb')
+			fullpath = os.path.join(dir_, pname)
+			fulldir = os.path.dirname(fullpath)
+			if not os.path.exists(fulldir):
+				os.makedirs(fulldir)
+			fp = file(fullpath, 'wb')
 			fp.write(book.archive[pname].read())
 			fp.close()
 
