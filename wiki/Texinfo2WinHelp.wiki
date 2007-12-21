@@ -1,5 +1,5 @@
 #summary Texinfo to HLP How-to
-#labels HowTo,HLP
+#labels HowTo,WinHelp
 
 These are the steps to make the files above:
 
