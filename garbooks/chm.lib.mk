@@ -24,9 +24,7 @@ HHC = "C:/Program Files/HTML Help Workshop/hhc.exe"
 HHC_FLAGS =
 
 ifeq ($(WINDIR),)
-WINE = wine
-WINE_FLAGS = 
-HHC := $(WINE) $(WINE_FLAGS) -- $(HHC)
+HHC := wine $(HHC)
 endif
 
 compile-chm/%: post-convert-mshh/%
