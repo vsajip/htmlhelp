@@ -4,11 +4,11 @@ from distutils.core import setup
 
 setup(
 	name = "pyhtmlhelp",
-	version = "0.4",
+	version = "0.5",
 	description = 'HTML Help Books Python API',
 	author = 'Jose Fonseca',
-	author_email = 'jrfonseca@users.berlios.de',
-	url = 'http://htmlhelp.berlios.de/',
+	author_email = 'jose.r.fonseca@gmail.com',
+	url = 'http://htmlhelp.googlecode.com/',
 	packages = [
 		'htmlhelp',
 		'htmlhelp.archive',
