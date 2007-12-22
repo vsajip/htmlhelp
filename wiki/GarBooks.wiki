@@ -1,5 +1,5 @@
 #summary GAR system
-#labels Tool
+#labels Tool,CHM,DevHelp,HTB
 
 = About the GAR system =
 
