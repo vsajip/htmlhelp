@@ -1,5 +1,5 @@
 #summary pyhtmlhelp HTML Help book conversion utility
-#labels Tool,Featured
+#labels Tool,Featured,CHM,HTB,DevHelp
 
 = Introduction =
 
