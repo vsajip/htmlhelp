@@ -1,5 +1,5 @@
 GARNAME = binutils
-GARVERSION = 2.18
+GARVERSION = 2.19
 MASTER_SITES = \
 	http://ftp.gnu.org/pub/gnu/$(GARNAME)/ \
 	ftp://ftp.kernel.org/pub/linux/devel/$(GARNAME)/
