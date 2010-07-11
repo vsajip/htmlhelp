@@ -6,7 +6,7 @@
  * [http://www.winehq.org/ Wine]
    * It's assumed you have an empty Wine environment. Installed software in an existing Wine enviroment may cause conflicts during the installation steps below.
    * The following instructions were tested with *Wine version 0.9.47*. Your mileage with other versions will likely vary.
- * [http://www.kyz.uklinux.net/cabextract.php cabextract]
+ * [http://www.cabextract.org.uk/ cabextract]
 
 =Setup=
 
