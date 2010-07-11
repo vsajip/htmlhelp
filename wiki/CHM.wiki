@@ -23,7 +23,7 @@ Microsoft never released the format specification, but there are a few reverse e
 There are some tools which allow to read the contents of CHM files:
 
  * [http://66.93.236.84/~jedwin/projects/chmlib/ CHMLIB]
- * [http://www.kyz.uklinux.net/libmspack/ libmspack] — a library for Microsoft compression formats
+ * [http://www.cabextract.org.uk/libmspack/ libmspack] — a library for Microsoft compression formats
 
 =Viewers=
 
